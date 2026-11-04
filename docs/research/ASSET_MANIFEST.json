@@ -1,0 +1,3117 @@
+[
+  {
+    "kind": "font",
+    "source": "https://trionn.com/_next/static/media/FamiljenGroteskVariable_Regular-s.p.04jxz-d23sc_e.woff2",
+    "destination": "public/fonts/FamiljenGroteskVariable_Regular-s.p.04jxz-d23sc_e.woff2",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "font",
+    "source": "https://trionn.com/_next/static/media/MartianMono_Light-s.p.0htes.s6weu9-.woff2",
+    "destination": "public/fonts/MartianMono_Light-s.p.0htes.s6weu9-.woff2",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "font",
+    "source": "https://trionn.com/_next/static/media/NeueHaasDisplay_Roman-s.p.0ykdwddnvy5f_.woff2",
+    "destination": "public/fonts/NeueHaasDisplay_Roman-s.p.0ykdwddnvy5f_.woff2",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/logo.svg",
+    "destination": "public/images/logo.svg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "font",
+    "source": "https://trionn.com/_next/static/media/PPEditorialNew_Ultralight-s.p.0qe_2frr_fmiu.woff2",
+    "destination": "public/fonts/PPEditorialNew_Ultralight-s.p.0qe_2frr_fmiu.woff2",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "stylesheet",
+    "source": "https://trionn.com/_next/static/chunks/0wf1gwg29cqjw.css",
+    "destination": "docs/research/original-assets/stylesheets/0wf1gwg29cqjw.css",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "stylesheet",
+    "source": "https://trionn.com/_next/static/chunks/0sc3z3ff25230.css",
+    "destination": "docs/research/original-assets/stylesheets/0sc3z3ff25230.css",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0zaia6i55l01..js",
+    "destination": "docs/research/original-assets/scripts/0zaia6i55l01..js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/turbopack-0nz662b_cli3l.js",
+    "destination": "docs/research/original-assets/scripts/turbopack-0nz662b_cli3l.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/00nvzi6qb_-1r.js",
+    "destination": "docs/research/original-assets/scripts/00nvzi6qb_-1r.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0y3~cortx~or~.js",
+    "destination": "docs/research/original-assets/scripts/0y3~cortx~or~.js",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0yhyjmpxntzgh.js",
+    "destination": "docs/research/original-assets/scripts/0yhyjmpxntzgh.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/02m2onmcd.l.g.js",
+    "destination": "docs/research/original-assets/scripts/02m2onmcd.l.g.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/02yhtxn3klj8l.js",
+    "destination": "docs/research/original-assets/scripts/02yhtxn3klj8l.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0hy4s_59bkbd5.js",
+    "destination": "docs/research/original-assets/scripts/0hy4s_59bkbd5.js",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0d3shmwh5_nmn.js",
+    "destination": "docs/research/original-assets/scripts/0d3shmwh5_nmn.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0a9-h_-7zaxsq.js",
+    "destination": "docs/research/original-assets/scripts/0a9-h_-7zaxsq.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/08uh6.imupez1.js",
+    "destination": "docs/research/original-assets/scripts/08uh6.imupez1.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0~c9hxk6d_f9m.js",
+    "destination": "docs/research/original-assets/scripts/0~c9hxk6d_f9m.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/07.g0t_tlxvve.js",
+    "destination": "docs/research/original-assets/scripts/07.g0t_tlxvve.js",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0hjupzaltypqn.js",
+    "destination": "docs/research/original-assets/scripts/0hjupzaltypqn.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0_.rc2afwy26s.js",
+    "destination": "docs/research/original-assets/scripts/0_.rc2afwy26s.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0eox~aw2ff066.js",
+    "destination": "docs/research/original-assets/scripts/0eox~aw2ff066.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0sue_k2sp00no.js",
+    "destination": "docs/research/original-assets/scripts/0sue_k2sp00no.js",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/04srvx.z7_jun.js",
+    "destination": "docs/research/original-assets/scripts/04srvx.z7_jun.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/15ky3h9upk1qm.js",
+    "destination": "docs/research/original-assets/scripts/15ky3h9upk1qm.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://www.googletagmanager.com/gtag/js?id=G-D2L5FM3EVB",
+    "destination": "docs/research/original-assets/scripts/js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/blast-icon.svg",
+    "destination": "public/images/blast-icon.svg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/awards-card-video.mp4",
+    "destination": "public/video/awards-card-video.mp4",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/team/rushi.mp4#t=0.1",
+    "destination": "public/video/team/rushi.mp4",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/awards-card-video_m.mp4",
+    "destination": "public/video/awards-card-video_m.mp4",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/team/rushi_m.mp4#t=0.1",
+    "destination": "public/video/team/rushi_m.mp4",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/awwwards.svg",
+    "destination": "public/images/awwwards.svg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/ccda.svg",
+    "destination": "public/images/ccda.svg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/adesignaward.svg",
+    "destination": "public/images/adesignaward.svg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/thefwa.svg",
+    "destination": "public/images/thefwa.svg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/csswinner.svg",
+    "destination": "public/images/csswinner.svg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/gsap.svg",
+    "destination": "public/images/gsap.svg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/partner2.svg",
+    "destination": "public/images/partner2.svg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/partner1.svg",
+    "destination": "public/images/partner1.svg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/partner3.svg",
+    "destination": "public/images/partner3.svg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/partner4.svg",
+    "destination": "public/images/partner4.svg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/partner5.svg",
+    "destination": "public/images/partner5.svg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/1233qowaitufq.js",
+    "destination": "docs/research/original-assets/scripts/1233qowaitufq.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/06.ezyo7li73e.js",
+    "destination": "docs/research/original-assets/scripts/06.ezyo7li73e.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "stylesheet",
+    "source": "https://trionn.com/_next/static/chunks/0xt8hh0aijjr~.css",
+    "destination": "docs/research/original-assets/stylesheets/0xt8hh0aijjr~.css",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0.876vu_iktyk.js",
+    "destination": "docs/research/original-assets/scripts/0.876vu_iktyk.js",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0cdt5vs0zcfks.js",
+    "destination": "docs/research/original-assets/scripts/0cdt5vs0zcfks.js",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0.924d2y-5~87.js",
+    "destination": "docs/research/original-assets/scripts/0.924d2y-5~87.js",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/homepage-services-video.mp4",
+    "destination": "public/video/homepage-services-video.mp4",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "video",
+    "source": "https://trionn.com/video/homepage-services-video_m.mp4",
+    "destination": "public/video/homepage-services-video_m.mp4",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-09.jpg",
+    "destination": "public/images/orbit/orbit-09.jpg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/footer-sound.svg",
+    "destination": "public/images/footer-sound.svg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-08.jpg",
+    "destination": "public/images/orbit/orbit-08.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-06.jpg",
+    "destination": "public/images/orbit/orbit-06.jpg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-07.jpg",
+    "destination": "public/images/orbit/orbit-07.jpg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-05.jpg",
+    "destination": "public/images/orbit/orbit-05.jpg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-02.jpg",
+    "destination": "public/images/orbit/orbit-02.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-04.jpg",
+    "destination": "public/images/orbit/orbit-04.jpg",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-03.jpg",
+    "destination": "public/images/orbit/orbit-03.jpg",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/orbit/orbit-01.jpg",
+    "destination": "public/images/orbit/orbit-01.jpg",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "script",
+    "source": "https://trionn.com/_next/static/chunks/0zr9jf8h_0_k0.js",
+    "destination": "docs/research/original-assets/scripts/0zr9jf8h_0_k0.js",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/favicon-32x32.png",
+    "destination": "public/images/favicon-32x32.png",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0003.webp",
+    "destination": "public/images/stone/frame_0003.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0001.webp",
+    "destination": "public/images/stone/frame_0001.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0002.webp",
+    "destination": "public/images/stone/frame_0002.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0004.webp",
+    "destination": "public/images/stone/frame_0004.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0005.webp",
+    "destination": "public/images/stone/frame_0005.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0006.webp",
+    "destination": "public/images/stone/frame_0006.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0007.webp",
+    "destination": "public/images/stone/frame_0007.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0008.webp",
+    "destination": "public/images/stone/frame_0008.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0009.webp",
+    "destination": "public/images/stone/frame_0009.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0010.webp",
+    "destination": "public/images/stone/frame_0010.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0011.webp",
+    "destination": "public/images/stone/frame_0011.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0012.webp",
+    "destination": "public/images/stone/frame_0012.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0013.webp",
+    "destination": "public/images/stone/frame_0013.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0014.webp",
+    "destination": "public/images/stone/frame_0014.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0015.webp",
+    "destination": "public/images/stone/frame_0015.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0016.webp",
+    "destination": "public/images/stone/frame_0016.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0018.webp",
+    "destination": "public/images/stone/frame_0018.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0019.webp",
+    "destination": "public/images/stone/frame_0019.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0020.webp",
+    "destination": "public/images/stone/frame_0020.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0021.webp",
+    "destination": "public/images/stone/frame_0021.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0017.webp",
+    "destination": "public/images/stone/frame_0017.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0023.webp",
+    "destination": "public/images/stone/frame_0023.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0024.webp",
+    "destination": "public/images/stone/frame_0024.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0022.webp",
+    "destination": "public/images/stone/frame_0022.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0025.webp",
+    "destination": "public/images/stone/frame_0025.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0026.webp",
+    "destination": "public/images/stone/frame_0026.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0027.webp",
+    "destination": "public/images/stone/frame_0027.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0028.webp",
+    "destination": "public/images/stone/frame_0028.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0029.webp",
+    "destination": "public/images/stone/frame_0029.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0030.webp",
+    "destination": "public/images/stone/frame_0030.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0031.webp",
+    "destination": "public/images/stone/frame_0031.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0032.webp",
+    "destination": "public/images/stone/frame_0032.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0033.webp",
+    "destination": "public/images/stone/frame_0033.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0034.webp",
+    "destination": "public/images/stone/frame_0034.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0036.webp",
+    "destination": "public/images/stone/frame_0036.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0037.webp",
+    "destination": "public/images/stone/frame_0037.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0038.webp",
+    "destination": "public/images/stone/frame_0038.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0035.webp",
+    "destination": "public/images/stone/frame_0035.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0040.webp",
+    "destination": "public/images/stone/frame_0040.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0041.webp",
+    "destination": "public/images/stone/frame_0041.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0039.webp",
+    "destination": "public/images/stone/frame_0039.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0042.webp",
+    "destination": "public/images/stone/frame_0042.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0044.webp",
+    "destination": "public/images/stone/frame_0044.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0043.webp",
+    "destination": "public/images/stone/frame_0043.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0045.webp",
+    "destination": "public/images/stone/frame_0045.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0048.webp",
+    "destination": "public/images/stone/frame_0048.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0049.webp",
+    "destination": "public/images/stone/frame_0049.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0047.webp",
+    "destination": "public/images/stone/frame_0047.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0046.webp",
+    "destination": "public/images/stone/frame_0046.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0051.webp",
+    "destination": "public/images/stone/frame_0051.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0050.webp",
+    "destination": "public/images/stone/frame_0050.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0052.webp",
+    "destination": "public/images/stone/frame_0052.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0055.webp",
+    "destination": "public/images/stone/frame_0055.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0054.webp",
+    "destination": "public/images/stone/frame_0054.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0056.webp",
+    "destination": "public/images/stone/frame_0056.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0053.webp",
+    "destination": "public/images/stone/frame_0053.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0057.webp",
+    "destination": "public/images/stone/frame_0057.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0058.webp",
+    "destination": "public/images/stone/frame_0058.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0059.webp",
+    "destination": "public/images/stone/frame_0059.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0060.webp",
+    "destination": "public/images/stone/frame_0060.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0062.webp",
+    "destination": "public/images/stone/frame_0062.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0063.webp",
+    "destination": "public/images/stone/frame_0063.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0061.webp",
+    "destination": "public/images/stone/frame_0061.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0064.webp",
+    "destination": "public/images/stone/frame_0064.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0065.webp",
+    "destination": "public/images/stone/frame_0065.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0066.webp",
+    "destination": "public/images/stone/frame_0066.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0068.webp",
+    "destination": "public/images/stone/frame_0068.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0067.webp",
+    "destination": "public/images/stone/frame_0067.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0070.webp",
+    "destination": "public/images/stone/frame_0070.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0071.webp",
+    "destination": "public/images/stone/frame_0071.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0072.webp",
+    "destination": "public/images/stone/frame_0072.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0069.webp",
+    "destination": "public/images/stone/frame_0069.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0073.webp",
+    "destination": "public/images/stone/frame_0073.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0074.webp",
+    "destination": "public/images/stone/frame_0074.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0075.webp",
+    "destination": "public/images/stone/frame_0075.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0077.webp",
+    "destination": "public/images/stone/frame_0077.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0076.webp",
+    "destination": "public/images/stone/frame_0076.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0078.webp",
+    "destination": "public/images/stone/frame_0078.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0079.webp",
+    "destination": "public/images/stone/frame_0079.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0080.webp",
+    "destination": "public/images/stone/frame_0080.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0081.webp",
+    "destination": "public/images/stone/frame_0081.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0082.webp",
+    "destination": "public/images/stone/frame_0082.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0083.webp",
+    "destination": "public/images/stone/frame_0083.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0084.webp",
+    "destination": "public/images/stone/frame_0084.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0085.webp",
+    "destination": "public/images/stone/frame_0085.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0086.webp",
+    "destination": "public/images/stone/frame_0086.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0087.webp",
+    "destination": "public/images/stone/frame_0087.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0088.webp",
+    "destination": "public/images/stone/frame_0088.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0089.webp",
+    "destination": "public/images/stone/frame_0089.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0090.webp",
+    "destination": "public/images/stone/frame_0090.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0091.webp",
+    "destination": "public/images/stone/frame_0091.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0092.webp",
+    "destination": "public/images/stone/frame_0092.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0094.webp",
+    "destination": "public/images/stone/frame_0094.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0093.webp",
+    "destination": "public/images/stone/frame_0093.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0095.webp",
+    "destination": "public/images/stone/frame_0095.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0096.webp",
+    "destination": "public/images/stone/frame_0096.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0097.webp",
+    "destination": "public/images/stone/frame_0097.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0098.webp",
+    "destination": "public/images/stone/frame_0098.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0100.webp",
+    "destination": "public/images/stone/frame_0100.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0099.webp",
+    "destination": "public/images/stone/frame_0099.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0101.webp",
+    "destination": "public/images/stone/frame_0101.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0103.webp",
+    "destination": "public/images/stone/frame_0103.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0102.webp",
+    "destination": "public/images/stone/frame_0102.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0104.webp",
+    "destination": "public/images/stone/frame_0104.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0105.webp",
+    "destination": "public/images/stone/frame_0105.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0106.webp",
+    "destination": "public/images/stone/frame_0106.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0108.webp",
+    "destination": "public/images/stone/frame_0108.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0107.webp",
+    "destination": "public/images/stone/frame_0107.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0109.webp",
+    "destination": "public/images/stone/frame_0109.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0110.webp",
+    "destination": "public/images/stone/frame_0110.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0111.webp",
+    "destination": "public/images/stone/frame_0111.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0112.webp",
+    "destination": "public/images/stone/frame_0112.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0114.webp",
+    "destination": "public/images/stone/frame_0114.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0113.webp",
+    "destination": "public/images/stone/frame_0113.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0115.webp",
+    "destination": "public/images/stone/frame_0115.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0116.webp",
+    "destination": "public/images/stone/frame_0116.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0117.webp",
+    "destination": "public/images/stone/frame_0117.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0118.webp",
+    "destination": "public/images/stone/frame_0118.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0119.webp",
+    "destination": "public/images/stone/frame_0119.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0120.webp",
+    "destination": "public/images/stone/frame_0120.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0121.webp",
+    "destination": "public/images/stone/frame_0121.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0122.webp",
+    "destination": "public/images/stone/frame_0122.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0124.webp",
+    "destination": "public/images/stone/frame_0124.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0123.webp",
+    "destination": "public/images/stone/frame_0123.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0126.webp",
+    "destination": "public/images/stone/frame_0126.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0125.webp",
+    "destination": "public/images/stone/frame_0125.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0128.webp",
+    "destination": "public/images/stone/frame_0128.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0130.webp",
+    "destination": "public/images/stone/frame_0130.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0129.webp",
+    "destination": "public/images/stone/frame_0129.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0132.webp",
+    "destination": "public/images/stone/frame_0132.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0131.webp",
+    "destination": "public/images/stone/frame_0131.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0127.webp",
+    "destination": "public/images/stone/frame_0127.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0134.webp",
+    "destination": "public/images/stone/frame_0134.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0135.webp",
+    "destination": "public/images/stone/frame_0135.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0133.webp",
+    "destination": "public/images/stone/frame_0133.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0137.webp",
+    "destination": "public/images/stone/frame_0137.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0138.webp",
+    "destination": "public/images/stone/frame_0138.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0136.webp",
+    "destination": "public/images/stone/frame_0136.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0141.webp",
+    "destination": "public/images/stone/frame_0141.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0139.webp",
+    "destination": "public/images/stone/frame_0139.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0142.webp",
+    "destination": "public/images/stone/frame_0142.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0140.webp",
+    "destination": "public/images/stone/frame_0140.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0143.webp",
+    "destination": "public/images/stone/frame_0143.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0145.webp",
+    "destination": "public/images/stone/frame_0145.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0144.webp",
+    "destination": "public/images/stone/frame_0144.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0147.webp",
+    "destination": "public/images/stone/frame_0147.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0148.webp",
+    "destination": "public/images/stone/frame_0148.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0149.webp",
+    "destination": "public/images/stone/frame_0149.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0150.webp",
+    "destination": "public/images/stone/frame_0150.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0151.webp",
+    "destination": "public/images/stone/frame_0151.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0152.webp",
+    "destination": "public/images/stone/frame_0152.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0153.webp",
+    "destination": "public/images/stone/frame_0153.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0146.webp",
+    "destination": "public/images/stone/frame_0146.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0154.webp",
+    "destination": "public/images/stone/frame_0154.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0155.webp",
+    "destination": "public/images/stone/frame_0155.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0156.webp",
+    "destination": "public/images/stone/frame_0156.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0157.webp",
+    "destination": "public/images/stone/frame_0157.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0160.webp",
+    "destination": "public/images/stone/frame_0160.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0158.webp",
+    "destination": "public/images/stone/frame_0158.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0159.webp",
+    "destination": "public/images/stone/frame_0159.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0162.webp",
+    "destination": "public/images/stone/frame_0162.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0161.webp",
+    "destination": "public/images/stone/frame_0161.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0163.webp",
+    "destination": "public/images/stone/frame_0163.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0164.webp",
+    "destination": "public/images/stone/frame_0164.webp",
+    "status": "existing",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0165.webp",
+    "destination": "public/images/stone/frame_0165.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0166.webp",
+    "destination": "public/images/stone/frame_0166.webp",
+    "status": "existing",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0168.webp",
+    "destination": "public/images/stone/frame_0168.webp",
+    "status": "existing",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0167.webp",
+    "destination": "public/images/stone/frame_0167.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0169.webp",
+    "destination": "public/images/stone/frame_0169.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0171.webp",
+    "destination": "public/images/stone/frame_0171.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0170.webp",
+    "destination": "public/images/stone/frame_0170.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0172.webp",
+    "destination": "public/images/stone/frame_0172.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0176.webp",
+    "destination": "public/images/stone/frame_0176.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0173.webp",
+    "destination": "public/images/stone/frame_0173.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0175.webp",
+    "destination": "public/images/stone/frame_0175.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0177.webp",
+    "destination": "public/images/stone/frame_0177.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0178.webp",
+    "destination": "public/images/stone/frame_0178.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0174.webp",
+    "destination": "public/images/stone/frame_0174.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0179.webp",
+    "destination": "public/images/stone/frame_0179.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0180.webp",
+    "destination": "public/images/stone/frame_0180.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0183.webp",
+    "destination": "public/images/stone/frame_0183.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0181.webp",
+    "destination": "public/images/stone/frame_0181.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0184.webp",
+    "destination": "public/images/stone/frame_0184.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0182.webp",
+    "destination": "public/images/stone/frame_0182.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0185.webp",
+    "destination": "public/images/stone/frame_0185.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0189.webp",
+    "destination": "public/images/stone/frame_0189.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0188.webp",
+    "destination": "public/images/stone/frame_0188.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0187.webp",
+    "destination": "public/images/stone/frame_0187.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0186.webp",
+    "destination": "public/images/stone/frame_0186.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0190.webp",
+    "destination": "public/images/stone/frame_0190.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0194.webp",
+    "destination": "public/images/stone/frame_0194.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0192.webp",
+    "destination": "public/images/stone/frame_0192.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0191.webp",
+    "destination": "public/images/stone/frame_0191.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0195.webp",
+    "destination": "public/images/stone/frame_0195.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0193.webp",
+    "destination": "public/images/stone/frame_0193.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0198.webp",
+    "destination": "public/images/stone/frame_0198.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0197.webp",
+    "destination": "public/images/stone/frame_0197.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0199.webp",
+    "destination": "public/images/stone/frame_0199.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0200.webp",
+    "destination": "public/images/stone/frame_0200.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0201.webp",
+    "destination": "public/images/stone/frame_0201.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0202.webp",
+    "destination": "public/images/stone/frame_0202.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0203.webp",
+    "destination": "public/images/stone/frame_0203.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0204.webp",
+    "destination": "public/images/stone/frame_0204.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0206.webp",
+    "destination": "public/images/stone/frame_0206.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0208.webp",
+    "destination": "public/images/stone/frame_0208.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0207.webp",
+    "destination": "public/images/stone/frame_0207.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0205.webp",
+    "destination": "public/images/stone/frame_0205.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0209.webp",
+    "destination": "public/images/stone/frame_0209.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0210.webp",
+    "destination": "public/images/stone/frame_0210.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0211.webp",
+    "destination": "public/images/stone/frame_0211.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0213.webp",
+    "destination": "public/images/stone/frame_0213.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0212.webp",
+    "destination": "public/images/stone/frame_0212.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0216.webp",
+    "destination": "public/images/stone/frame_0216.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0214.webp",
+    "destination": "public/images/stone/frame_0214.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0217.webp",
+    "destination": "public/images/stone/frame_0217.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0218.webp",
+    "destination": "public/images/stone/frame_0218.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0219.webp",
+    "destination": "public/images/stone/frame_0219.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0220.webp",
+    "destination": "public/images/stone/frame_0220.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0215.webp",
+    "destination": "public/images/stone/frame_0215.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0196.webp",
+    "destination": "public/images/stone/frame_0196.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0221.webp",
+    "destination": "public/images/stone/frame_0221.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0223.webp",
+    "destination": "public/images/stone/frame_0223.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0222.webp",
+    "destination": "public/images/stone/frame_0222.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0224.webp",
+    "destination": "public/images/stone/frame_0224.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0225.webp",
+    "destination": "public/images/stone/frame_0225.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0226.webp",
+    "destination": "public/images/stone/frame_0226.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0227.webp",
+    "destination": "public/images/stone/frame_0227.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0228.webp",
+    "destination": "public/images/stone/frame_0228.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0229.webp",
+    "destination": "public/images/stone/frame_0229.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0230.webp",
+    "destination": "public/images/stone/frame_0230.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0232.webp",
+    "destination": "public/images/stone/frame_0232.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0233.webp",
+    "destination": "public/images/stone/frame_0233.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0235.webp",
+    "destination": "public/images/stone/frame_0235.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0236.webp",
+    "destination": "public/images/stone/frame_0236.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0231.webp",
+    "destination": "public/images/stone/frame_0231.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0234.webp",
+    "destination": "public/images/stone/frame_0234.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0237.webp",
+    "destination": "public/images/stone/frame_0237.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0238.webp",
+    "destination": "public/images/stone/frame_0238.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0240.webp",
+    "destination": "public/images/stone/frame_0240.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0241.webp",
+    "destination": "public/images/stone/frame_0241.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0242.webp",
+    "destination": "public/images/stone/frame_0242.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0239.webp",
+    "destination": "public/images/stone/frame_0239.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0243.webp",
+    "destination": "public/images/stone/frame_0243.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0244.webp",
+    "destination": "public/images/stone/frame_0244.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0245.webp",
+    "destination": "public/images/stone/frame_0245.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0246.webp",
+    "destination": "public/images/stone/frame_0246.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0247.webp",
+    "destination": "public/images/stone/frame_0247.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0248.webp",
+    "destination": "public/images/stone/frame_0248.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0249.webp",
+    "destination": "public/images/stone/frame_0249.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0251.webp",
+    "destination": "public/images/stone/frame_0251.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0250.webp",
+    "destination": "public/images/stone/frame_0250.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0253.webp",
+    "destination": "public/images/stone/frame_0253.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0254.webp",
+    "destination": "public/images/stone/frame_0254.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0255.webp",
+    "destination": "public/images/stone/frame_0255.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0258.webp",
+    "destination": "public/images/stone/frame_0258.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0257.webp",
+    "destination": "public/images/stone/frame_0257.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0252.webp",
+    "destination": "public/images/stone/frame_0252.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0256.webp",
+    "destination": "public/images/stone/frame_0256.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0259.webp",
+    "destination": "public/images/stone/frame_0259.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0261.webp",
+    "destination": "public/images/stone/frame_0261.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0262.webp",
+    "destination": "public/images/stone/frame_0262.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0263.webp",
+    "destination": "public/images/stone/frame_0263.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0266.webp",
+    "destination": "public/images/stone/frame_0266.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0265.webp",
+    "destination": "public/images/stone/frame_0265.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0260.webp",
+    "destination": "public/images/stone/frame_0260.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0267.webp",
+    "destination": "public/images/stone/frame_0267.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0268.webp",
+    "destination": "public/images/stone/frame_0268.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0264.webp",
+    "destination": "public/images/stone/frame_0264.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0270.webp",
+    "destination": "public/images/stone/frame_0270.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0271.webp",
+    "destination": "public/images/stone/frame_0271.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0269.webp",
+    "destination": "public/images/stone/frame_0269.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0272.webp",
+    "destination": "public/images/stone/frame_0272.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0273.webp",
+    "destination": "public/images/stone/frame_0273.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0274.webp",
+    "destination": "public/images/stone/frame_0274.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0276.webp",
+    "destination": "public/images/stone/frame_0276.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0277.webp",
+    "destination": "public/images/stone/frame_0277.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0278.webp",
+    "destination": "public/images/stone/frame_0278.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0279.webp",
+    "destination": "public/images/stone/frame_0279.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0280.webp",
+    "destination": "public/images/stone/frame_0280.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0281.webp",
+    "destination": "public/images/stone/frame_0281.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0282.webp",
+    "destination": "public/images/stone/frame_0282.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0275.webp",
+    "destination": "public/images/stone/frame_0275.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0283.webp",
+    "destination": "public/images/stone/frame_0283.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0284.webp",
+    "destination": "public/images/stone/frame_0284.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0285.webp",
+    "destination": "public/images/stone/frame_0285.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0287.webp",
+    "destination": "public/images/stone/frame_0287.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0288.webp",
+    "destination": "public/images/stone/frame_0288.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0286.webp",
+    "destination": "public/images/stone/frame_0286.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0289.webp",
+    "destination": "public/images/stone/frame_0289.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0290.webp",
+    "destination": "public/images/stone/frame_0290.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0291.webp",
+    "destination": "public/images/stone/frame_0291.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0293.webp",
+    "destination": "public/images/stone/frame_0293.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0294.webp",
+    "destination": "public/images/stone/frame_0294.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0295.webp",
+    "destination": "public/images/stone/frame_0295.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0292.webp",
+    "destination": "public/images/stone/frame_0292.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0296.webp",
+    "destination": "public/images/stone/frame_0296.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0297.webp",
+    "destination": "public/images/stone/frame_0297.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0298.webp",
+    "destination": "public/images/stone/frame_0298.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0300.webp",
+    "destination": "public/images/stone/frame_0300.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0301.webp",
+    "destination": "public/images/stone/frame_0301.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0302.webp",
+    "destination": "public/images/stone/frame_0302.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0299.webp",
+    "destination": "public/images/stone/frame_0299.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0303.webp",
+    "destination": "public/images/stone/frame_0303.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0304.webp",
+    "destination": "public/images/stone/frame_0304.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0305.webp",
+    "destination": "public/images/stone/frame_0305.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0308.webp",
+    "destination": "public/images/stone/frame_0308.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0306.webp",
+    "destination": "public/images/stone/frame_0306.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0310.webp",
+    "destination": "public/images/stone/frame_0310.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0309.webp",
+    "destination": "public/images/stone/frame_0309.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0312.webp",
+    "destination": "public/images/stone/frame_0312.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0311.webp",
+    "destination": "public/images/stone/frame_0311.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0313.webp",
+    "destination": "public/images/stone/frame_0313.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0307.webp",
+    "destination": "public/images/stone/frame_0307.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0314.webp",
+    "destination": "public/images/stone/frame_0314.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0316.webp",
+    "destination": "public/images/stone/frame_0316.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0317.webp",
+    "destination": "public/images/stone/frame_0317.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0318.webp",
+    "destination": "public/images/stone/frame_0318.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0315.webp",
+    "destination": "public/images/stone/frame_0315.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0319.webp",
+    "destination": "public/images/stone/frame_0319.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0320.webp",
+    "destination": "public/images/stone/frame_0320.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0321.webp",
+    "destination": "public/images/stone/frame_0321.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0323.webp",
+    "destination": "public/images/stone/frame_0323.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0324.webp",
+    "destination": "public/images/stone/frame_0324.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0325.webp",
+    "destination": "public/images/stone/frame_0325.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0326.webp",
+    "destination": "public/images/stone/frame_0326.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0328.webp",
+    "destination": "public/images/stone/frame_0328.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0329.webp",
+    "destination": "public/images/stone/frame_0329.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0322.webp",
+    "destination": "public/images/stone/frame_0322.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0330.webp",
+    "destination": "public/images/stone/frame_0330.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0331.webp",
+    "destination": "public/images/stone/frame_0331.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0327.webp",
+    "destination": "public/images/stone/frame_0327.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0333.webp",
+    "destination": "public/images/stone/frame_0333.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0334.webp",
+    "destination": "public/images/stone/frame_0334.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0332.webp",
+    "destination": "public/images/stone/frame_0332.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0335.webp",
+    "destination": "public/images/stone/frame_0335.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0336.webp",
+    "destination": "public/images/stone/frame_0336.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0337.webp",
+    "destination": "public/images/stone/frame_0337.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0338.webp",
+    "destination": "public/images/stone/frame_0338.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0340.webp",
+    "destination": "public/images/stone/frame_0340.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0339.webp",
+    "destination": "public/images/stone/frame_0339.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0341.webp",
+    "destination": "public/images/stone/frame_0341.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0343.webp",
+    "destination": "public/images/stone/frame_0343.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0344.webp",
+    "destination": "public/images/stone/frame_0344.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0342.webp",
+    "destination": "public/images/stone/frame_0342.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0345.webp",
+    "destination": "public/images/stone/frame_0345.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0346.webp",
+    "destination": "public/images/stone/frame_0346.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0347.webp",
+    "destination": "public/images/stone/frame_0347.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0349.webp",
+    "destination": "public/images/stone/frame_0349.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0350.webp",
+    "destination": "public/images/stone/frame_0350.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0348.webp",
+    "destination": "public/images/stone/frame_0348.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0352.webp",
+    "destination": "public/images/stone/frame_0352.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0351.webp",
+    "destination": "public/images/stone/frame_0351.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0353.webp",
+    "destination": "public/images/stone/frame_0353.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0357.webp",
+    "destination": "public/images/stone/frame_0357.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0356.webp",
+    "destination": "public/images/stone/frame_0356.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0355.webp",
+    "destination": "public/images/stone/frame_0355.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0354.webp",
+    "destination": "public/images/stone/frame_0354.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0360.webp",
+    "destination": "public/images/stone/frame_0360.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0358.webp",
+    "destination": "public/images/stone/frame_0358.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0359.webp",
+    "destination": "public/images/stone/frame_0359.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0364.webp",
+    "destination": "public/images/stone/frame_0364.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0362.webp",
+    "destination": "public/images/stone/frame_0362.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0363.webp",
+    "destination": "public/images/stone/frame_0363.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0366.webp",
+    "destination": "public/images/stone/frame_0366.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0365.webp",
+    "destination": "public/images/stone/frame_0365.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0369.webp",
+    "destination": "public/images/stone/frame_0369.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0368.webp",
+    "destination": "public/images/stone/frame_0368.webp",
+    "status": "downloaded",
+    "workerId": 1
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0367.webp",
+    "destination": "public/images/stone/frame_0367.webp",
+    "status": "downloaded",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/myworker/myworker.jpg",
+    "destination": "public/images/projects/myworker/myworker.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/myworker/myworker_m.jpg",
+    "destination": "public/images/projects/myworker/myworker_m.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/pulse-studio/pulse-studio.jpg",
+    "destination": "public/images/projects/pulse-studio/pulse-studio.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/pulse-studio/pulse-studio_m.jpg",
+    "destination": "public/images/projects/pulse-studio/pulse-studio_m.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/loftloom/loftloom.jpg",
+    "destination": "public/images/projects/loftloom/loftloom.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/projects/loftloom/loftloom_m.jpg",
+    "destination": "public/images/projects/loftloom/loftloom_m.jpg",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/malte.webp",
+    "destination": "public/images/malte.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stephen.webp",
+    "destination": "public/images/stephen.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/doug.webp",
+    "destination": "public/images/doug.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/jean.webp",
+    "destination": "public/images/jean.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/zoltan.webp",
+    "destination": "public/images/zoltan.webp",
+    "status": "existing",
+    "workerId": 2
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0361.webp",
+    "destination": "public/images/stone/frame_0361.webp",
+    "status": "downloaded",
+    "workerId": 3
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0370.webp",
+    "destination": "public/images/stone/frame_0370.webp",
+    "status": "downloaded",
+    "workerId": 4
+  },
+  {
+    "kind": "image",
+    "source": "https://trionn.com/images/stone/frame_0371.webp",
+    "destination": "public/images/stone/frame_0371.webp",
+    "status": "downloaded",
+    "workerId": 1
+  }
+]
