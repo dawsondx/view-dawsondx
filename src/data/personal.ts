@@ -246,8 +246,11 @@ export const products = [
       "统一状态机 + SSE / Last-Event-ID + Idempotency-Key，支持断点续传与崩溃恢复",
       "题目版 / 答案解析版双 Word 校验导出，支持 BYOK 纯前端直连与桌面自托管",
     ],
-    tech: "Python 3.14 · FastAPI · SQLAlchemy 2.0 · React 19 · TS 6 · Vite 8 · Tailwind CSS 4 · 在线体验：doc2exam.dawsondx.top",
-    links: [{ label: "查看源码", href: "https://github.com/dawsondx/Doc2Exam" }],
+    tech: "Python 3.14 · FastAPI · SQLAlchemy 2.0 · React 19 · TS 6 · Vite 8 · Tailwind CSS 4",
+    links: [
+      { label: "在线体验", href: "https://doc2exam.dawsondx.top/" },
+      { label: "查看源码", href: "https://github.com/dawsondx/Doc2Exam" },
+    ],
   },
   {
     id: "skill-compass",
