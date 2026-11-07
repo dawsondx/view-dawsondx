@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CustomCursor } from "@/components/common/CustomCursor";
 
 const siteUrl = "https://view.dawsondx.top";
 const title = "Dawson — PMP 运维项目经理 ｜ AI 工作流架构师 ｜ 全栈独立开发者";
@@ -56,7 +57,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body>{children}</body>
+      <body>
+        {children}
+        <CustomCursor />
+      </body>
     </html>
   );
 }

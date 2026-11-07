@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dawson — 自定义指针方案 Cursor Lab</title>
+<style>
+  :root {
+    --ink: #141519;
+    --ink-soft: #1d1f27;
+    --paper: #f4f1e8;
+    --paper-light: #fffdf7;
+    --blue: #5147e5;
+    --lime: #d8ff63;
+    --coral: #ff7657;
+    --muted: #666663;
+    --line: rgba(20, 21, 25, 0.16);
+    --mono: "Martian Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Familjen Grotesk", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .shell { width: min(1200px, 100% - 64px); margin: 0 auto; padding: 64px 0 120px; }
+  .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    margin: 16px 0 0;
+    font-size: clamp(34px, 4.6vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+  h1 em { font-style: normal; color: var(--blue); }
+  .lede { max-width: 62ch; margin: 18px 0 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
+  .lede b { color: var(--ink); font-weight: 600; }
+
+  .toolbar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    margin: 34px 0 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .toolbar .label { margin-right: 8px; }
+  .chip {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+    padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--paper-light); cursor: pointer; transition: all .2s;
+  }
+  .chip:hover { border-color: var(--ink); }
+  .chip.on { background: var(--ink); color: var(--lime); border-color: var(--ink); }
+  .hint { margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: .08em; }
+
+  h2 { margin: 56px 0 6px; font-size: 22px; letter-spacing: -0.02em; }
+  h2 span { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; color: var(--blue); margin-left: 10px; vertical-align: middle; }
+  .sub { margin: 0 0 22px; font-size: 13px; line-height: 1.7; color: var(--muted); max-width: 70ch; }
+
+  /* ---------- cursor art ---------- */
+  .cur { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; z-index: 60; }
+  .cur i, .cur span { position: absolute; display: block; left: 0; top: 0; }
+  .cur svg { position: absolute; left: 0; top: 0; overflow: visible; }
+  .cur * { transition: opacity .16s ease-out, transform .18s cubic-bezier(.2,.9,.2,1), width .18s, height .18s, margin .18s, background .18s, border-color .18s; }
+
+  /* A — Swiss square */
+  .cur--a .a-dot { width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; background: var(--ink); }
+  .cur--a .a-ring { width: 26px; height: 26px; margin: -13px 0 0 -13px; border: 1px solid var(--ink); border-radius: 2px; }
+  .cur--a .a-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; transform: scaleY(.6); }
+  .cur--a.is-link .a-dot { opacity: 0; transform: scale(.3); }
+  .cur--a.is-link .a-ring { width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 6px; background: var(--lime); transform: rotate(45deg); }
+  .cur--a.is-text .a-dot, .cur--a.is-text .a-ring { opacity: 0; }
+  .cur--a.is-text .a-caret { opacity: 1; transform: scaleY(1); }
+
+  /* B — registration crosshair */
+  .cur--b .b-h { width: 20px; height: 1.5px; margin: -0.75px 0 0 -10px; background: var(--ink); }
+  .cur--b .b-v { width: 1.5px; height: 20px; margin: -10px 0 0 -0.75px; background: var(--ink); }
+  .cur--b .b-dot { width: 3px; height: 3px; margin: -1.5px 0 0 -1.5px; background: var(--ink); border-radius: 50%; }
+  .cur--b .b-ring { width: 30px; height: 30px; margin: -15px 0 0 -15px; border: 1px solid var(--ink); border-radius: 50%; opacity: 0; transform: scale(.6); background: rgba(216,255,99,.35); }
+  .cur--b .b-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; }
+  .cur--b.is-link .b-dot { opacity: 1; }
+  .cur--b.is-link .b-h, .cur--b.is-link .b-v { opacity: 0; transform: scale(.4); }
+  .cur--b.is-link .b-ring { opacity: 1; transform: scale(1); }
+  .cur--b.is-text .b-h, .cur--b.is-text .b-v, .cur--b.is-text .b-dot, .cur--b.is-text .b-ring { opacity: 0; }
+  .cur--b.is-text .b-caret { opacity: 1; }
+
+  /* C — corner ticks / marquee */
+  .cur--c .c-box { width: 26px; height: 26px; margin: -13px 0 0 -13px; border: 1px solid var(--ink); border-radius: 1px; opacity: 0; transform: scale(.8); background: transparent; z-index: 1; }
+  .cur--c .c-tick { width: 7px; height: 7px; z-index: 2; }
+  .cur--c .c-tick::before, .cur--c .c-tick::after { content: ""; position: absolute; background: var(--ink); }
+  .cur--c .c-tick::before { width: 7px; height: 1.5px; }
+  .cur--c .c-tick::after { width: 1.5px; height: 7px; }
+  .cur--c .t1 { margin: -13px 0 0 -13px; }
+  .cur--c .t2 { margin: -13px 0 0 6px; }
+  .cur--c .t2::before { right: 0; }
+  .cur--c .t2::after { right: 0; }
+  .cur--c .t3 { margin: 6px 0 0 -13px; }
+  .cur--c .t3::before { bottom: 0; }
+  .cur--c .t3::after { bottom: 0; }
+  .cur--c .t4 { margin: 6px 0 0 6px; }
+  .cur--c .t4::before { right: 0; bottom: 0; }
+  .cur--c .t4::after { right: 0; bottom: 0; }
+  .cur--c .c-dot { width: 4px; height: 4px; margin: -2px 0 0 -2px; background: var(--ink); border-radius: 50%; }
+  .cur--c .c-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; }
+  .cur--c.is-link .c-dot { opacity: 0; }
+  .cur--c.is-link .c-box { opacity: 1; transform: scale(1); background: var(--lime); }
+  .cur--c.is-text .c-dot, .cur--c.is-text .c-tick, .cur--c.is-text .c-box { opacity: 0; }
+  .cur--c.is-text .c-caret { opacity: 1; }
+
+  /* D — asterisk */
+  .cur--d .d-star { width: 26px; height: 26px; margin: -13px 0 0 -13px; }
+  .cur--d .d-star line { stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; }
+  .cur--d .d-core { width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px; background: var(--lime); border: 1px solid var(--ink); border-radius: 50%; opacity: 0; transform: scale(.4); z-index: 3; }
+  .cur--d .d-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; }
+  .cur--d.is-link .d-star { transform: rotate(22.5deg) scale(1.28); }
+  .cur--d.is-link .d-core { opacity: 1; transform: scale(1.4); }
+  .cur--d.is-text .d-star, .cur--d.is-text .d-core { opacity: 0; }
+  .cur--d.is-text .d-caret { opacity: 1; }
+
+  /* E — dot + lagging ring */
+  .cur--e .e-dot { width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; background: var(--ink); border-radius: 50%; }
+  .cur--e .e-ring { width: 26px; height: 26px; margin: -13px 0 0 -13px; border: 1px solid rgba(20,21,25,.45); border-radius: 50%; }
+  .cur--e .e-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; }
+  .cur--e.is-link .e-dot { opacity: 0; transform: scale(.4); }
+  .cur--e.is-link .e-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border-width: 1.5px; border-color: var(--ink); background: var(--lime); }
+  .cur--e.is-text .e-dot, .cur--e.is-text .e-ring { opacity: 0; }
+  .cur--e.is-text .e-caret { opacity: 1; }
+
+  /* F — brand mark */
+  .cur--f .f-mark { width: 20px; height: 20px; margin: -10px 0 0 -10px; filter: drop-shadow(0 1px 2px rgba(20,21,25,.28)); }
+  .cur--f .f-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1px solid var(--ink); border-radius: 50%; opacity: 0; transform: scale(.7); }
+  .cur--f .f-caret { width: 2px; height: 22px; margin: -11px 0 0 -1px; background: var(--ink); opacity: 0; }
+  .cur--f.is-link .f-mark { transform: scale(.72) translate(3px, 3px); }
+  .cur--f.is-link .f-ring { opacity: 1; transform: scale(1); }
+  .cur--f.is-text .f-mark, .cur--f.is-text .f-ring { opacity: 0; }
+  .cur--f.is-text .f-caret { opacity: 1; }
+
+  /* inverse (dark sections) */
+  .tone-dark .cur--a .a-dot, .tone-dark .cur--a .a-caret { background: var(--paper); }
+  .tone-dark .cur--a .a-ring { border-color: var(--paper); }
+  .tone-dark .cur--b .b-h, .tone-dark .cur--b .b-v, .tone-dark .cur--b .b-dot, .tone-dark .cur--b .b-caret { background: var(--paper); }
+  .tone-dark .cur--b .b-ring { border-color: var(--paper); }
+  .tone-dark .cur--e .e-dot, .tone-dark .cur--e .e-caret { background: var(--paper); }
+  .tone-dark .cur--e .e-ring { border-color: rgba(244,241,232,.55); }
+  .tone-dark .cur--d .d-star line { stroke: var(--paper); }
+  .tone-dark .cur--d .d-caret { background: var(--paper); }
+  .tone-dark .cur--c .c-tick::before, .tone-dark .cur--c .c-tick::after { background: var(--paper); }
+  .tone-dark .cur--c .c-dot, .tone-dark .cur--c .c-caret { background: var(--paper); }
+  .tone-dark .cur--c .c-box { border-color: var(--paper); }
+
+  /* ---------- boards ---------- */
+  .board { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--paper-light); }
+  .rows { display: grid; grid-template-columns: 210px 1fr 1fr 1fr; align-items: stretch; }
+  .rows > div { border-bottom: 1px solid var(--line); }
+  .rows > .meta, .rows > .cell { min-height: 118px; }
+  .rows > div:nth-last-child(-n+4) { border-bottom: 0; }
+  .head { display: flex; align-items: center; padding: 14px 20px; height: 46px; background: rgba(20,21,25,.03); }
+  .head span { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+  .meta { padding: 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; }
+  .meta b { font-size: 15px; letter-spacing: -.01em; }
+  .meta small { font-size: 11.5px; line-height: 1.6; color: var(--muted); }
+  .cell { position: relative; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--line); }
+  .cell .anchor { position: relative; width: 100%; height: 118px; }
+  .cell .cur { left: 50%; top: 50%; }
+  .cell .tag { position: absolute; left: 12px; bottom: 10px; font-family: var(--mono); font-size: 9px; letter-spacing: .1em; color: rgba(20,21,25,.35); }
+
+  .dark-strip { margin-top: 26px; border-radius: 18px; background: var(--ink); color: var(--paper); padding: 30px 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .dark-strip .stage { position: relative; height: 132px; border: 1px solid rgba(244,241,232,.14); border-radius: 12px; }
+  .dark-strip .stage .cur { left: 50%; top: 50%; }
+  .dark-strip p { margin: 0 0 12px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; opacity: .55; grid-column: 1 / -1; }
+
+  .play { margin-top: 26px; border-radius: 18px; border: 1px solid var(--line); background: var(--paper-light); padding: 34px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 34px; cursor: none; }
+  .play h3 { margin: 0 0 10px; font-size: 26px; letter-spacing: -.02em; }
+  .play p { margin: 0 0 18px; font-size: 13px; line-height: 1.75; color: var(--muted); max-width: 40ch; }
+  .play a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+  .play input { width: 100%; margin-top: 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); font: inherit; font-size: 13px; color: var(--ink); }
+  .play .spec { border-left: 1px solid var(--line); padding-left: 28px; font-family: var(--mono); font-size: 10.5px; line-height: 2; letter-spacing: .04em; color: var(--muted); }
+  .play .spec b { color: var(--ink); font-weight: 500; }
+
+  .note { margin-top: 46px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .note div { border-top: 1px solid var(--line); padding-top: 16px; }
+  .note p { margin: 8px 0 0; font-size: 12.5px; line-height: 1.75; color: var(--muted); }
+  .note p b { color: var(--ink); font-weight: 600; }
+
+  /* live cursor */
+  .cur--live { position: fixed; left: 0; top: 0; }
+
+  @media (max-width: 900px) {
+    .shell { width: calc(100% - 36px); padding-top: 40px; }
+    .rows { grid-template-columns: 1fr; }
+    .rows > div { border-bottom: 1px solid var(--line); }
+    .head { background: rgba(20,21,25,.05); }
+    .meta { border-bottom: 1px solid var(--line); }
+    .cell { min-height: 118px; border-left: 0; }
+    .play { grid-template-columns: 1fr; padding: 22px; }
+    .play .spec { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; }
+    .dark-strip { grid-template-columns: 1fr; }
+    .note { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <p class="label">CURSOR LAB / 2026.11</p>
+  <h1>指针也是<br /><em>排版的一部分</em>。</h1>
+  <p class="lede">
+    6 个方向，全部从你这套视觉里长出来：<b>墨黑 + 纸白 + 青柠</b>、1px 线条、几何硬边。
+    每个方向都含三种状态：<b>默认 / 悬停链接 / 文本输入</b>，深色区块自动反白。
+  </p>
+
+  <div class="toolbar">
+    <span class="label">LIVE</span>
+    <div id="chips"></div>
+    <span class="hint">在下方预览区移动鼠标 · 数字键 1–6 切换</span>
+  </div>
+
+  <h2>状态矩阵<span>STATE MATRIX</span></h2>
+  <p class="sub">真实尺寸、真实背景。重点看「悬停链接」那一列——它决定指针会不会抢内容。</p>
+  <div class="board">
+    <div class="rows" id="board"></div>
+  </div>
+
+  <h2>深色区块<span>ON DARK</span></h2>
+  <p class="sub">你的首屏与页头是墨黑底。指针需要自动反白，否则直接消失。</p>
+  <div class="dark-strip" id="darkStrip">
+    <p>TOP 3 · 在 #141519 上的表现</p>
+  </div>
+
+  <h2>实景体验<span>LIVE PLAYGROUND</span></h2>
+  <p class="sub">在这块区域里移动指针：划过链接会切换成悬停态，点进输入框会变成竖线光标。</p>
+  <div class="play" id="play">
+    <div>
+      <h3>把方法，做成记号。</h3>
+      <p>这是一段正文，用来对比指针压字时的干扰程度。试试把指针停在 <a href="#top" id="demoLink">这个链接</a> 上，再移到右边的输入框里。</p>
+      <input id="demoInput" placeholder="点这里试试文本光标…" />
+    </div>
+    <div class="spec">
+      <div>ACTIVE&nbsp;&nbsp;<b id="specName">A · 方框游标</b></div>
+      <div>STATE&nbsp;&nbsp;&nbsp;<b id="specState">default</b></div>
+      <div>TONE&nbsp;&nbsp;&nbsp;&nbsp;<b id="specTone">light</b></div>
+      <div>LATENCY&nbsp;<b id="specLag">0ms</b></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <div>
+      <p class="label">WHY NOT NATIVE</p>
+      <p>原生指针没有状态语义。自定义指针能把「这里能点 / 这里能输」提前 120ms 告诉用户，比 hover 变色更早。</p>
+    </div>
+    <div>
+      <p class="label">COST</p>
+      <p>一次 <b>rAF</b> + 一个 <b>translate3d</b>，无布局读取。只在 pointer:fine 设备启用，触屏与 <b>prefers-reduced-motion</b> 自动退回原生。</p>
+    </div>
+    <div>
+      <p class="label">INVERSE</p>
+      <p><b>elementFromPoint</b> 向上找第一个非透明底色，算亮度：低于 0.45 自动切反白，不依赖手写 section 标记。</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const INK = "#141519";
+const PAPER = "#f4f1e8";
+
+const star = `<svg class="d-star" viewBox="0 0 26 26" width="26" height="26">
+  <line x1="13" y1="0.5" x2="13" y2="25.5"/><line x1="0.5" y1="13" x2="25.5" y2="13"/>
+  <line x1="4.2" y1="4.2" x2="21.8" y2="21.8"/><line x1="21.8" y1="4.2" x2="4.2" y2="21.8"/>
+</svg>`;
+
+const mark = `<svg class="f-mark" viewBox="8 8 84 84" width="22" height="22">
+  <rect x="8" y="8" width="84" height="84" rx="24" fill="#d8ff63" stroke="#141519" stroke-width="3"/>
+  <path fill="#141519" d="M34 33Q34 30 37 30H46A20 20 0 0 1 46 70H37Q34 70 34 67Z"/>
+</svg>`;
+
+const V = [
+  {
+    id: "a",
+    name: "方框游标",
+    note: "7px 墨点 + 26px 1px 细框；悬停旋成 45° 青柠菱形。",
+    html: `<i class="a-dot"></i><i class="a-ring"></i><i class="a-caret"></i>`,
+  },
+  {
+    id: "b",
+    name: "对位准星",
+    note: "印刷对位标记：十字 + 中心点；悬停转 45° 并长出青柠圆场。",
+    html: `<i class="b-h"></i><i class="b-v"></i><i class="b-dot"></i><i class="b-ring"></i><i class="b-caret"></i>`,
+  },
+  {
+    id: "c",
+    name: "框选角标",
+    note: "四角 L 形标记围出 26px 选箱；悬停整块填青柠。",
+    html: `<i class="c-tick t1"></i><i class="c-tick t2"></i><i class="c-tick t3"></i><i class="c-tick t4"></i><i class="c-box"></i><i class="c-dot"></i><i class="c-caret"></i>`,
+  },
+  {
+    id: "d",
+    name: "星芒指针",
+    note: "站点 ✳ 母题做成指针；悬停微转 22.5° 并点亮青柠核心。",
+    html: `${star}<i class="d-core"></i><i class="d-caret"></i>`,
+  },
+  {
+    id: "e",
+    name: "墨点拖环",
+    note: "5px 墨点硬跟手，26px 细环带 0.18 缓动拖尾；悬停环撑到 40px。",
+    html: `<i class="e-ring"></i><i class="e-dot"></i><i class="e-caret"></i>`,
+  },
+  {
+    id: "f",
+    name: "D 标跟随",
+    note: "新品牌标缩到 20px 当指针；悬停缩进细环中心，品牌感最强。",
+    html: `${mark}<i class="f-ring"></i><i class="f-caret"></i>`,
+  },
+];
+
+const cur = (v, state, tone) =>
+  `<div class="cur cur--${v.id}${state === "link" ? " is-link" : state === "text" ? " is-text" : ""}">${v.html}</div>`;
+
+// state matrix
+const cells = [];
+cells.push(`<div class="head"><span>方向 / 状态</span></div>`);
+["默认 default", "悬停链接 link", "文本 text"].forEach((t) => cells.push(`<div class="head"><span>${t}</span></div>`));
+V.forEach((v) => {
+  cells.push(`<div class="meta"><b>${v.name}</b><small>${v.note}</small></div>`);
+  ["default", "link", "text"].forEach((s) => {
+    cells.push(`<div class="cell"><div class="anchor">${cur(v, s)}</div><span class="tag">${s.toUpperCase()}</span></div>`);
+  });
+});
+document.getElementById("board").innerHTML = cells.join("");
+
+// dark strip: top 3
+["a", "b", "e"].forEach((id) => {
+  const v = V.find((x) => x.id === id);
+  const el = document.createElement("div");
+  el.className = "stage tone-dark";
+  el.innerHTML = `<div class="cur cur--${v.id} is-link" style="left:50%;top:50%">${v.html}</div>`;
+  document.getElementById("darkStrip").appendChild(el);
+});
+
+// chips + live cursor
+let active = V[0];
+const chips = document.getElementById("chips");
+V.forEach((v, i) => {
+  const b = document.createElement("button");
+  b.className = "chip" + (i === 0 ? " on" : "");
+  b.textContent = `${i + 1} · ${v.name}`;
+  b.onclick = () => setActive(v, b);
+  chips.appendChild(b);
+});
+
+const live = document.createElement("div");
+live.className = "cur cur--a cur--live";
+live.innerHTML = V[0].html;
+document.body.appendChild(live);
+
+let pointer = { x: -100, y: -100 };
+let ring = { x: -100, y: -100 };
+let lagMs = 0;
+
+function setActive(v, btn) {
+  active = v;
+  live.className = `cur cur--${v.id} cur--live` + (live.classList.contains("is-link") ? " is-link" : "");
+  live.innerHTML = v.html;
+  [...chips.children].forEach((c) => c.classList.toggle("on", c === btn));
+  document.getElementById("specName").textContent = `${v.id.toUpperCase()} · ${v.name}`;
+}
+
+function luminance(el) {
+  let node = el;
+  while (node && node !== document.documentElement) {
+    const bg = getComputedStyle(node).backgroundColor;
+    const m = bg.match(/[\d.]+/g);
+    if (m && (m.length === 3 || parseFloat(m[3]) > 0.5)) {
+      const [r, g, b] = m.map(Number);
+      return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+    }
+    node = node.parentElement;
+  }
+  return 1;
+}
+
+let raf = 0;
+let last = performance.now();
+
+window.addEventListener("pointermove", (e) => {
+  pointer.x = e.clientX;
+  pointer.y = e.clientY;
+  const target = e.target;
+  const tag = target.tagName;
+  const isText = tag === "INPUT" || tag === "TEXTAREA" || target.closest("[contenteditable='true']");
+  const isLink = tag === "A" || tag === "BUTTON" || target.closest("a, button, .chip");
+  live.classList.toggle("is-text", !!isText);
+  live.classList.toggle("is-link", !isText && !!isLink);
+  document.getElementById("specState").textContent = isText ? "text" : isLink ? "link" : "default";
+
+  const tone = luminance(target) < 0.45 ? "dark" : "light";
+  live.classList.toggle("tone-dark", tone === "dark");
+  document.getElementById("specTone").textContent = tone;
+
+  if (!raf) {
+    raf = requestAnimationFrame(tick);
+  }
+});
+
+function tick(now) {
+  const dt = Math.min(40, now - last);
+  last = now;
+  raf = 0;
+  live.style.transform = `translate3d(${pointer.x}px, ${pointer.y}px, 0)`;
+
+  const k = 1 - Math.pow(0.001, dt / 1000);
+  const dx = pointer.x - ring.x;
+  const dy = pointer.y - ring.y;
+  ring.x += dx * (1 - Math.pow(0.02, dt / 1000));
+  ring.y += dy * (1 - Math.pow(0.02, dt / 1000));
+
+  const dot = live.querySelector(".e-ring");
+  if (dot) {
+    dot.style.transform = `translate3d(${(ring.x - pointer.x).toFixed(2)}px, ${(ring.y - pointer.y).toFixed(2)}px, 0)`;
+    lagMs = Math.round(Math.hypot(dx, dy) * 6);
+  }
+  document.getElementById("specLag").textContent = active.id === "e" ? `${lagMs}ms` : "0ms";
+  if (raf === 0 && (Math.abs(dx) > 0.4 || Math.abs(dy) > 0.4)) raf = requestAnimationFrame(tick);
+  else if (Math.abs(dx) > 0.4 || Math.abs(dy) > 0.4) raf = requestAnimationFrame(tick);
+}
+
+// hide native cursor only where it makes sense
+if (window.matchMedia("(pointer:fine)").matches) {
+  document.documentElement.style.cursor = "none";
+  document.querySelectorAll("body, body *").forEach((el) => {});
+  const style = document.createElement("style");
+  style.textContent = "body, body * { cursor: none !important; } input, textarea { cursor: none !important; }";
+  document.head.appendChild(style);
+}
+
+window.addEventListener("keydown", (e) => {
+  const i = Number(e.key) - 1;
+  if (i >= 0 && i < V.length) setActive(V[i], chips.children[i]);
+});
+
+// init position so the first screenshot isn't empty
+pointer.x = 620; pointer.y = 520; ring.x = 620; ring.y = 520;
+live.style.transform = "translate3d(620px, 520px, 0)";
+</script>
+</body>
+</html>

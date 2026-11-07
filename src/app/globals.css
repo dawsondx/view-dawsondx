@@ -2186,3 +2186,90 @@ div[id] {
   }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
 }
+
+/* ------------------------------------------------------------------
+   Custom cursor — D 标硬跟手 + 拖尾细环（仅 pointer:fine 启用）
+------------------------------------------------------------------ */
+html.has-cursor-fx,
+html.has-cursor-fx * {
+  cursor: none !important;
+}
+
+html.has-cursor-fx :is(input, textarea, [contenteditable="true"]) {
+  cursor: text !important;
+}
+
+.cursor-fx {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  will-change: transform;
+}
+
+.cursor-fx.is-on { opacity: 1; }
+.cursor-fx.is-over-text { opacity: 0; }
+
+.cf-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  filter: drop-shadow(0 1px 3px rgba(20, 21, 25, 0.3));
+  transition: transform 0.24s var(--spring);
+}
+
+.cf-mark svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cf-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 1px solid rgba(20, 21, 25, 0.45);
+  border-radius: 50%;
+  opacity: 0;
+  transition:
+    width 0.26s var(--spring),
+    height 0.26s var(--spring),
+    margin 0.26s var(--spring),
+    border-width 0.2s ease,
+    border-color 0.24s ease,
+    background 0.24s ease;
+}
+
+.cursor-fx.is-link .cf-mark { transform: scale(0.92); }
+
+.cursor-fx.is-link .cf-ring {
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border-width: 1.5px;
+  border-color: rgba(20, 21, 25, 0.85);
+  background: rgba(216, 255, 99, 0.18);
+}
+
+.cursor-fx.is-inverse .cf-ring { border-color: rgba(244, 241, 232, 0.7); }
+
+.cursor-fx.is-inverse.is-link .cf-ring {
+  border-color: var(--paper);
+  background: transparent;
+}
+
+@media (pointer: coarse) {
+  .cursor-fx { display: none; }
+}
