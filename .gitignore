@@ -51,6 +51,11 @@ temp/
 # Local agent/tooling artifacts
 .qoder-credits/
 spark-output/
+.playwright-cli/
+.workbuddy/
+docs/design-references/redesign-2026/
+public/images/A_premium_playful_3D_editorial_*
+public/images/Premium_editorial_3D_illustrat_*
 
 # Exploratory design demos
 design-demo-*.html

@@ -9,17 +9,15 @@ import { SkillsSection } from "@/components/SkillsSection";
 export default function Home() {
   return (
     <>
-      <a href="#top" className="skip-link">
+      <a href="#main" className="skip-link">
         跳到主内容
       </a>
-      <div className="bg-grid" aria-hidden="true" />
-      <div className="bg-glow" aria-hidden="true" />
       <SiteHeader />
-      <main id="top" tabIndex={-1} className="relative z-[1] outline-none">
+      <main id="main" tabIndex={-1} className="outline-none">
         <HeroSection />
-        <AboutVision />
         <PortfolioSection />
         <ServicesSequence />
+        <AboutVision />
         <SkillsSection />
       </main>
       <SiteFooter />

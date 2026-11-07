@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://view.dawsondx.top";
-const title = "Dawson — Office 培训讲师 ｜ PPT 设计师 ｜ 神器收藏家";
+const title = "Dawson — PMP 运维项目经理 ｜ AI 工作流架构师 ｜ 全栈独立开发者";
 const description =
-  "Dawson：秋叶 Office 核心助教、《秒懂 Word》著书合作者。提供 Office 疑难解答、PPT 定制设计、海报设计与效率神器分享服务。";
+  "Dawson：一线实体运维项目经理、AI 产品与工作流架构师、全栈独立开发者。提供企业级 AI Agent 与工作流定制、年度 AI 实战陪伴群、开源工具与 Office 设计交付。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/seo/og.png",
         width: 1200,
         height: 630,
-        alt: "Dawson — Office 培训讲师 / PPT 设计师 / 神器收藏家",
+        alt: "Dawson — PMP 运维项目经理 / AI 工作流架构师 / 全栈独立开发者",
       },
     ],
   },

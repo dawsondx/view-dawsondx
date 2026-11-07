@@ -1,83 +1,70 @@
 import Image from "next/image";
 import { hero, siteConfig } from "@/data/personal";
 
-const IDENTITIES = hero.identities;
-const CIRCLED_INDEX = 1;
-
 export function HeroSection() {
   return (
-    <section id="hero" className="hero-shell section-pad" aria-labelledby="hero-title">
-      <svg className="doodle doodle-star" viewBox="0 0 90 90" aria-hidden="true">
-        <path d="M45 8 L52 34 L79 34 L57 50 L65 78 L45 61 L25 78 L33 50 L11 34 L38 34 Z" />
-      </svg>
-      <svg className="doodle doodle-arrow" viewBox="0 0 110 60" aria-hidden="true">
-        <path d="M6 50 C 30 12, 60 12, 92 30" />
-        <path d="M80 24 L93 30 L84 40" />
-      </svg>
+    <section id="top" className="hero" aria-labelledby="hero-title">
+      <div className="hero-grid page-shell">
+        <div className="hero-copy">
+          <p className="eyebrow hero-eyebrow">
+            <span className="status-dot" aria-hidden="true" />
+            {siteConfig.name} · {siteConfig.location} · AI WORKFLOW / INDIE DEV
+          </p>
 
-      <p className="hero-kicker label">
-        <span className="hero-avatar" aria-hidden="true">
-          <Image src="/touxiang.webp" alt="" width={44} height={44} className="rounded-full object-cover" />
-        </span>
-        <span className="dot" aria-hidden="true" />
-        {siteConfig.name} · {siteConfig.location} · 独立培训师
-      </p>
-
-      <h1 id="hero-title" className="hero-heading">
-        <span className="lmask"><span className="d1">你好，</span></span>
-        <span className="lmask"><span className="d2">我是</span></span>{" "}
-        <span className="lmask"><span className="d3">Dawson</span></span>
-      </h1>
-
-      <p className="hero-identity">
-        {IDENTITIES.map((word, i) => {
-          const item =
-            i === CIRCLED_INDEX ? (
-              <span className="id-circled">
-                {word}
-                <svg
-                  className="id-circle"
-                  viewBox="0 0 100 44"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    pathLength={1}
-                    vectorEffect="non-scaling-stroke"
-                    d="M50 3 C 22 1, 4 10, 5 22 C 6 35, 28 42, 54 41 C 80 40, 97 31, 95 19 C 93 8, 74 2, 46 4"
-                  />
-                </svg>
-              </span>
-            ) : (
-              word
-            );
-
-          return (
-            <span key={word} className="id-group">
-              {item}
-              {i < IDENTITIES.length - 1 && <span className="sr-only">，</span>}
+          <h1 id="hero-title" className="hero-title">
+            <span>把复杂，</span>
+            <span>
+              做成<span className="text-lime">清晰</span>的
             </span>
-          );
-        })}
-      </p>
+            <span>答案。</span>
+          </h1>
 
-      <div className="hero-foot">
-        <p className="max-w-[36ch] text-[15px] leading-[1.7] text-[#555555]">
-          {hero.declaration}
-        </p>
-        <a className="btn" href="#contact">
-          聊聊合作 <span className="ar" aria-hidden="true">→</span>
-        </a>
-        <div className="flex w-full flex-wrap gap-x-7 gap-y-2 text-[13px] text-[#6b6b6b] sm:w-auto">
-          <span>7 期秋叶 Office 打卡营核心助教</span>
-          <span>深圳 · 可远程协作</span>
+          <p className="hero-roles">{hero.identities.join(" × ")}</p>
+          <p className="hero-description">{hero.declaration}</p>
+
+          <div className="hero-actions">
+            <a className="button button--lime" href="#work">
+              看精选作品 <span aria-hidden="true">↓</span>
+            </a>
+            <a className="button button--ghost" href="#contact">
+              聊聊合作 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <ul className="hero-proof" aria-label="经历与成果">
+            {hero.proof.map((item) => (
+              <li key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="hero-art" aria-label="Dawson 的 AI 工作流数字工作台">
+          <div className="hero-art-meta">
+            <span>AI / SYSTEMS / AUTOMATION</span>
+            <span>SHENZHEN · REMOTE</span>
+          </div>
+          <Image
+            src="/images/hero-workbench.webp"
+            alt="由幻灯片、工具模块、书本与几何体组成的蓝色 3D 数字工作台"
+            width={1024}
+            height={936}
+            priority
+            className="hero-art-image"
+          />
+          <p className="hero-art-caption">
+            <span>IDEAS INTO SYSTEMS</span>
+            <span aria-hidden="true">✳</span>
+          </p>
         </div>
       </div>
 
-      <div className="scroll-hint" aria-hidden="true">
-        <span className="arr">↓</span>
-        <span>Scroll</span>
-      </div>
+      <a href="#work" className="scroll-cue" aria-label="向下浏览精选作品">
+        <span>SCROLL TO EXPLORE</span>
+        <span aria-hidden="true">↓</span>
+      </a>
     </section>
   );
 }

@@ -1,61 +1,93 @@
-"use client"
+"use client";
 
-import { useReveal } from "@/hooks/useReveal"
-import { skills } from "@/data/personal"
+import Image from "next/image";
+import { useReveal } from "@/hooks/useReveal";
+import { products, resources, skills } from "@/data/personal";
 
 export function SkillsSection() {
-  const sectionRef = useReveal<HTMLElement>()
+  const sectionRef = useReveal<HTMLElement>();
 
   return (
-    <section
-      ref={sectionRef}
-      id="skills"
-      className="section-pad relative overflow-hidden py-24 md:py-36"
-      aria-labelledby="skills-title"
-    >
-      <span className="ghost" aria-hidden="true">05</span>
-      <div className="section-head">
-        <h2 className="label">
-          <span className="dot" aria-hidden="true" />
-          <span id="skills-title">专业技能</span>
-        </h2>
-        <p className="label hidden md:block">办公 / 设计 / AI / 编程</p>
-      </div>
+    <section ref={sectionRef} id="resources" className="resources-section section-pad" aria-labelledby="resources-title">
+      <div className="page-shell">
+        <div className="section-heading section-heading--blue" data-reveal>
+          <div>
+            <p className="section-label"><span>04</span> PRODUCTS & RESOURCES</p>
+            <h2 id="resources-title">把方法，做成<br />能跑的系统。</h2>
+          </div>
+          <p className="section-intro">6 个独立开发与开源产品、2 座持续更新的知识库。把工作流里的高频痛点，用确定性的工程逻辑封装成可复用工具。</p>
+        </div>
 
-      <div className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
-        {skills.map((skill) => (
-          <article key={skill.name} data-reveal className="group">
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 className="text-[clamp(18px,2vw,24px)] font-bold tracking-[-0.02em]">
-                {skill.name}
-              </h3>
-              <span className="text-[13px] font-semibold tabular-nums text-[#6b6b6b]">
-                {skill.level} · {skill.percent}%
-              </span>
-            </div>
-            <p className="mt-1 text-[12px] text-[#6b6b6b]">
-              {skill.category} · {skill.note}
-            </p>
-            <div
-              className="mt-3 h-[6px] overflow-hidden rounded-full bg-[#f0f0ec]"
-              role="progressbar"
-              aria-valuenow={skill.percent}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-label={`${skill.name} 熟练度 ${skill.percent}%`}
-            >
-              <div
-                className="skill-bar h-full rounded-full bg-[#ffe28a] transition-[width] duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)]"
-                style={{ width: `${skill.percent}%` }}
-              />
-            </div>
-          </article>
-        ))}
-      </div>
+        <div className="product-grid" aria-label="独立开发与开源产品矩阵">
+          {products.map((item) => (
+            <article key={item.id} className="product-card" data-reveal>
+              <div className="product-card-top">
+                <span>{item.no} / {item.category}</span>
+                <span aria-hidden="true">✳</span>
+              </div>
+              <h3>{item.name}</h3>
+              <p className="product-description">{item.description}</p>
+              <ul>
+                {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+              </ul>
+              <p className="product-tech">{item.tech}</p>
+              <div className="product-links">
+                {item.links.map((link) => {
+                  const isExternal = link.href.startsWith("http");
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
+                    >
+                      {link.label} <span aria-hidden="true">↗</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </article>
+          ))}
+        </div>
 
-      <p data-reveal className="mt-10 max-w-[40ch] text-sm leading-[1.7] text-[#555555]">
-        从 Office 全家桶到 AI 智能体——工具会迭代，<span className="hl">解决问题的能力</span>不会过时。
-      </p>
+        <div className="resource-subhead" data-reveal>
+          <p className="section-label">KNOWLEDGE BASES / 持续更新</p>
+          <p>两座公开知识库，把零散工具与方法整理成能检索、能上手、能复用的资料。</p>
+        </div>
+
+        <div className="resource-grid">
+          {resources.knowledgeBases.map((item, index) => (
+            <article key={item.id} className="resource-card" data-reveal>
+              <div className="resource-card-top">
+                <span>0{index + 1} / IMA KNOWLEDGE BASE</span>
+                <span aria-hidden="true">✳</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span className="resource-feature">{item.feature}</span>
+              <div className="resource-card-foot">
+                <Image src={item.qr} alt={item.qrAlt} width={96} height={96} className="resource-qr" />
+                {item.members ? <strong>{item.members}<small>MEMBERS</small></strong> : <span>持续更新<br />按主题整理</span>}
+                <a href={item.href} target="_blank" rel="noreferrer" className="button button--dark">
+                  打开知识库 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="capability-stack" data-reveal>
+          <p className="section-label">CAPABILITY STACK / 能力栈</p>
+          <ul>
+            {skills.map((skill) => (
+              <li key={skill.name}>
+                <strong>{skill.name}</strong>
+                <span>{skill.note}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
-  )
+  );
 }

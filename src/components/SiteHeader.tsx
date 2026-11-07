@@ -1,31 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { siteConfig } from "@/data/personal";
 
 const navigationItems = [
-  { href: "#about", label: "关于我" },
-  { href: "#work", label: "作品" },
-  { href: "#services", label: "服务" },
-  { href: "#skills", label: "技能" },
-  { href: "#contact", label: "联系" },
+  { href: "#work", label: "精选作品", en: "WORK" },
+  { href: "#services", label: "业务方向", en: "BUSINESS" },
+  { href: "#about", label: "关于我", en: "ABOUT" },
+  { href: "#resources", label: "产品资源", en: "PRODUCTS" },
 ] as const;
-
-function MenuGlyph({ isOpen }: { isOpen: boolean }) {
-  return (
-    <span className="relative block h-3 w-4" aria-hidden="true">
-      <span
-        className={`absolute left-0 top-[3px] h-[2px] w-4 rounded-full bg-current transition-transform duration-300 ${
-          isOpen ? "translate-y-[3px] rotate-45" : ""
-        }`}
-      />
-      <span
-        className={`absolute bottom-[2px] left-0 h-[2px] rounded-full bg-current transition-all duration-300 ${
-          isOpen ? "w-4 -translate-y-[3px] -rotate-45" : "w-2.5"
-        }`}
-      />
-    </span>
-  );
-}
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,9 +16,7 @@ export function SiteHeader() {
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (!isMenuOpen) {
-      return;
-    }
+    if (!isMenuOpen) return;
 
     const previousOverflow = document.body.style.overflow;
     const pageRegions = Array.from(document.querySelectorAll("main, body > footer"));
@@ -63,54 +44,40 @@ export function SiteHeader() {
 
   return (
     <>
-      <header
-        className="fixed inset-x-0 top-0 z-[60] flex h-[72px] items-center justify-between border-b border-[#f0f0f2] bg-white/80 px-5 backdrop-blur-xl md:px-10"
-        style={{ animation: "fade-down 1.2s cubic-bezier(0.19,1,0.22,1) 0.05s both" }}
-      >
-        <a
-          href="#top"
-          className="flex items-baseline gap-2"
-          onClick={closeMenu}
-          aria-label="Dawson 首页"
-        >
-          <span className="text-[22px] font-extrabold leading-none tracking-[-0.04em]">
-            D
-            <span className="relative inline-block">
-              /
-              <span
-                aria-hidden="true"
-                className="absolute inset-x-0 bottom-[1px] -z-10 h-[7px] bg-[#ffe28a]"
-              />
-            </span>
+      <header className="site-header">
+        <a href="#top" className="brand" onClick={closeMenu} aria-label="Dawson 首页">
+          <span className="brand-mark">D/</span>
+          <span className="brand-name">
+            Dawson
+            <small>AI Workflow Architect</small>
           </span>
-          <span className="text-xs uppercase tracking-[0.08em] text-[#555555]">Dawson</span>
         </a>
 
-        <div className="flex items-center gap-3 md:gap-7">
-          <nav className="hidden items-center gap-7 md:flex" aria-label="快捷导航">
-            {navigationItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="nav-link px-0.5 py-1 text-sm font-semibold text-[#555555] transition-colors duration-300 hover:text-[#1a1a1a]"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-          <a href="#contact" onClick={closeMenu} className="btn">
-            聊聊合作 <span className="ar" aria-hidden="true">→</span>
+        <nav className="desktop-nav" aria-label="主导航">
+          {navigationItems.map((item) => (
+            <a key={item.href} href={item.href} className="nav-link">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <a href="#contact" className="button button--lime header-cta">
+            开始合作 <span aria-hidden="true">↗</span>
           </a>
           <button
             ref={triggerRef}
             type="button"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e8e8e8] bg-white text-[#1a1a1a] transition-transform duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-105 md:hidden"
+            className="menu-toggle"
             aria-controls="site-menu"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "关闭导航菜单" : "打开导航菜单"}
             onClick={() => setIsMenuOpen((current) => !current)}
           >
-            <MenuGlyph isOpen={isMenuOpen} />
+            <span className={isMenuOpen ? "menu-glyph is-open" : "menu-glyph"} aria-hidden="true">
+              <span />
+              <span />
+            </span>
           </button>
         </div>
       </header>
@@ -120,37 +87,30 @@ export function SiteHeader() {
         id="site-menu"
         tabIndex={-1}
         inert={!isMenuOpen}
-        className={`fixed inset-0 z-[55] overflow-hidden bg-white text-[#1a1a1a] outline-none transition-opacity duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-          isMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        className={isMenuOpen ? "menu-panel is-open" : "menu-panel"}
         aria-hidden={!isMenuOpen}
         aria-label="导航菜单"
       >
-        <div className="relative flex min-h-[100dvh] flex-col px-6 pb-6 pt-28 md:px-10 md:pb-8 md:pt-32">
-          <p className="label mb-6">
-            <span className="dot" aria-hidden="true" />
-            导航
-          </p>
-          <nav aria-label="主导航">
-            {navigationItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                tabIndex={isMenuOpen ? 0 : -1}
-                onClick={closeMenu}
-                className="group flex items-baseline justify-between border-b border-[#f0f0f2] py-4"
-              >
-                <span className="text-[clamp(2.75rem,9vw,5.5rem)] font-extrabold leading-none tracking-[-0.04em] transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-x-3">
-                  {item.label}
-                </span>
-              </a>
-            ))}
-          </nav>
-
-          <div className="label mt-auto flex items-end justify-between pt-10">
-            <p>把复杂留给工具，把效率还给工作。</p>
-            <p className="hidden text-right sm:block">深圳 · 可远程协作</p>
-          </div>
+        <nav className="mobile-nav" aria-label="移动端导航">
+          {navigationItems.map((item, index) => (
+            <a
+              key={item.href}
+              href={item.href}
+              tabIndex={isMenuOpen ? 0 : -1}
+              onClick={closeMenu}
+              className="mobile-nav-link"
+            >
+              <span className="mobile-nav-index">0{index + 1}</span>
+              <span>{item.label}</span>
+              <span className="mobile-nav-en">{item.en}</span>
+            </a>
+          ))}
+        </nav>
+        <div className="mobile-menu-foot">
+          <p>{siteConfig.slogan}</p>
+          <a href="#contact" onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>
+            深圳 · 可远程协作 ↗
+          </a>
         </div>
       </div>
     </>
