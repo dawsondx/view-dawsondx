@@ -1,0 +1,11 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawson mark 06">
+  <g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+    <path d="M38 26V74"/>
+    <path d="M38 26A24 24 0 0 1 38 74"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="38" cy="26" r="7"/>
+    <circle cx="38" cy="74" r="7"/>
+    <circle cx="48" cy="50" r="5"/>
+  </g>
+</svg>

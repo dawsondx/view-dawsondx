@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { beian, contactRows, resources, siteConfig } from "@/data/personal";
+import { BrandMark } from "@/components/icons/BrandMark";
 import { useReveal } from "@/hooks/useReveal";
 
 export function SiteFooter() {
@@ -95,7 +96,7 @@ export function SiteFooter() {
 
         <div className="footer-meta">
           <div>
-            <span className="brand-mark">D/</span>
+            <span className="brand-mark"><BrandMark /></span>
             <p>© 2026 {siteConfig.name}<br />{siteConfig.title}</p>
           </div>
           <a href="#top" className="back-top">回到顶部 ↑</a>

@@ -309,11 +309,12 @@ div[id] {
   justify-content: center;
   flex: none;
   border-radius: 12px;
-  background: var(--lime);
-  color: var(--ink);
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: -0.08em;
+  color: var(--lime);
+}
+
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
 }
 
 .brand-name {
@@ -1471,6 +1472,10 @@ div[id] {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.footer-meta .brand-mark {
+  color: var(--ink);
 }
 
 .footer-meta p {

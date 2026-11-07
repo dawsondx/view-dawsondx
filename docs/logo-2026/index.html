@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dawson — Logo 探索 · 7 个方向</title>
+<style>
+  :root {
+    --ink: #141519;
+    --ink-soft: #1d1f27;
+    --paper: #f4f1e8;
+    --paper-light: #fffdf7;
+    --blue: #5147e5;
+    --lime: #d8ff63;
+    --coral: #ff7657;
+    --muted: #666663;
+    --line: rgba(20, 21, 25, 0.16);
+    --mono: "Martian Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Familjen Grotesk", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .shell { width: min(1240px, 100% - 64px); margin: 0 auto; padding: 72px 0 96px; }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .masthead { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+  .masthead h1 {
+    margin: 18px 0 0;
+    font-size: clamp(38px, 5.4vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+  .masthead h1 em { font-style: normal; color: var(--blue); }
+  .masthead p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--muted); max-width: 44ch; }
+  .masthead p b { color: var(--ink); font-weight: 600; }
+
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 44px; }
+  .card {
+    background: var(--paper-light);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 26px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(20, 21, 25, 0.09); }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  .card-head h2 { margin: 0; font-size: 19px; letter-spacing: -0.015em; font-weight: 700; }
+  .card-head span { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+  .card-no { color: var(--blue); }
+
+  .stage {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 188px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background:
+      radial-gradient(circle at 50% 45%, rgba(81, 71, 229, 0.045), transparent 62%),
+      var(--paper-light);
+  }
+  .canvas svg { width: 118px; height: 118px; }
+  .swatches { display: grid; grid-template-rows: repeat(3, 1fr); gap: 8px; }
+  .swatch {
+    width: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .swatch svg { width: 26px; height: 26px; }
+  .swatch--dark { background: var(--ink); color: var(--lime); border-color: var(--ink); }
+  .swatch--lime { background: var(--lime); color: var(--ink); border-color: var(--lime); }
+  .swatch--blue { background: var(--blue); color: var(--paper-light); border-color: var(--blue); }
+
+  .rationale { font-size: 13px; line-height: 1.7; color: var(--muted); margin: 0; }
+  .rationale strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 6px; font-size: 13.5px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  .tags i {
+    font-style: normal;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 9px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+  }
+
+  .scale { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .scale h3 { margin: 10px 0 22px; font-size: 22px; letter-spacing: -0.02em; }
+  .scale-row {
+    display: grid;
+    grid-template-columns: 200px repeat(4, 1fr);
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .scale-row > span:first-child { font-size: 13px; }
+  .scale-cell { display: flex; align-items: center; justify-content: flex-start; }
+  .scale-cell svg { color: var(--ink); }
+  .scale-head > span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
+
+  .note { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .note div { border-top: 1px solid var(--line); padding-top: 18px; }
+  .note p { margin: 10px 0 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+  .note p b { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .shell { width: min(100% - 36px, 100%); padding-top: 44px; }
+    .masthead { grid-template-columns: 1fr; gap: 22px; }
+    .grid { grid-template-columns: 1fr; }
+    .scale-row { grid-template-columns: 1fr; gap: 8px; }
+    .scale-cell { gap: 18px; }
+    .note { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="masthead">
+    <div>
+      <p class="label">DAWSON / BRAND MARK · 2026</p>
+      <h1>把方法，<br />做成<em>记号</em>。</h1>
+    </div>
+    <p>
+      7 个方向围绕同一个内核：<b>D</b>（Dawson）· 工程精度 · “方法做成系统”的确定性。
+      全部为 100×100 画板、单色 <b>currentColor</b> 实现，可直接落到页头 44px 方块、favicon 16px 与社交头像。
+    </p>
+  </header>
+
+  <main class="grid" id="grid"></main>
+
+  <section class="scale">
+    <p class="label">SCALE TEST / 真实尺寸</p>
+    <h3>16 → 44 px 的可读性</h3>
+    <div id="scaleRows"></div>
+  </section>
+
+  <section class="note">
+    <div>
+      <p class="label">HOW TO CHOOSE</p>
+      <p>优先看 <b>16px</b> 那一列——它决定 favicon、标签页、微信头像是否立得住。<b>01 / 02 / 07</b> 在这个尺寸最稳。</p>
+    </div>
+    <div>
+      <p class="label">NEXT STEP</p>
+      <p>选定一个方向后，我会把它接进 <b>SiteHeader</b>（替换 <b>D/</b> 文字标记）、导出 favicon / apple-touch-icon，并同步 OG 图与页脚署名。</p>
+    </div>
+  </section>
+</div>
+
+<script>
+  const V = [
+    {
+      no: "01",
+      name: "负空间方 D",
+      concept: "实心方块里挖出 D——一形两义，最接近“容器 + 内容”的工程隐喻。",
+      note: "44px 与 16px 都成立，可直接当作 App 图标底板；无渐变、无描边，缩到极小也不糊。",
+      tags: ["solid", "negative space", "favicon-safe"],
+      body: `<path fill="currentColor" fill-rule="evenodd" d="M32 8H68A24 24 0 0 1 92 32V68A24 24 0 0 1 68 92H32A24 24 0 0 1 8 68V32A24 24 0 0 1 32 8ZM34 33Q34 30 37 30H46A20 20 0 0 1 46 70H37Q34 70 34 67Z"/>`
+    },
+    {
+      no: "02",
+      name: "线 D · 半环",
+      concept: "一根竖脊 + 一段半圆，只留 D 的结构 DNA，最克制的一版。",
+      note: "7px 描边圆头端点，在深色页头与浅色纸面上同权重；适合与 wordmark 左对齐并排。",
+      tags: ["line", "minimal", "monochrome"],
+      body: `<path d="M34 74V26H42A24 24 0 0 1 42 74H34" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`
+    },
+    {
+      no: "03",
+      name: "D 斜杠",
+      concept: "承接现在的 D/ 文字标记，把斜杠升级成独立笔画：路径 + 分隔符。",
+      note: "与现站视觉资产连续性最好，改版时用户不会觉得换了品牌；斜杠同时暗示 /root、/dev 的开发者语气。",
+      tags: ["wordmark tie-in", "developer tone"],
+      body: `<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M26 70V30H34A20 20 0 0 1 34 70H26" stroke-width="6"/><path d="M61 34 75 66" stroke-width="6"/></g>`
+    },
+    {
+      no: "04",
+      name: "正形 D",
+      concept: "去掉所有容器，只留加重的字母本体：1px 也不浪费的身份标。",
+      note: "笔画与负空间全部 12 单位等比，16px 仍是一个清楚的 D；适合页脚署名、水印、文章末尾角标等不需要底板的位置。",
+      tags: ["solid letterform", "no container", "watermark"],
+      body: `<path fill="currentColor" fill-rule="evenodd" d="M27 22H45A28 28 0 0 1 45 78H27V22ZM39 34H45A16 16 0 0 1 45 66H39V34Z"/>`
+    },
+    {
+      no: "05",
+      name: "星芒 ✳",
+      concept: "把站点到处在用的 ✳ 收成正式符号：四长四短八芒，中心无核。",
+      note: "不是字母标，是母题标——可以和 Dawson 文字长期并置。跨媒介最好用，缩到 12px 仍是清楚的星。",
+      tags: ["symbol", "site motif", "scalable"],
+      body: `<g stroke="currentColor" stroke-width="6" stroke-linecap="round"><path d="M50 12V88"/><path d="M12 50H88"/><path d="M28.8 28.8 71.2 71.2"/><path d="M71.2 28.8 28.8 71.2"/></g>`
+    },
+    {
+      no: "06",
+      name: "节点闭环 D",
+      concept: "两端点是入口与出口，弧线把路径围成闭环，内圈一颗核作为重心。",
+      note: "叙事直指“输入→处理→可复用”的工作流；结构比纯线 D 更稳，适合做封面 / 章节页大标记。",
+      tags: ["node network", "loop", "story"],
+      body: `<g fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M38 26V74"/><path d="M38 26A24 24 0 0 1 38 74"/></g><g fill="currentColor"><circle cx="38" cy="26" r="7"/><circle cx="38" cy="74" r="7"/><circle cx="48" cy="50" r="5"/></g>`
+    },
+    {
+      no: "07",
+      name: "青柠方 D",
+      concept: "现站 brand-mark 的正式化：青柠底 + 墨黑线 D，两色构建，去掉文字后依然成立。",
+      note: "与页面强调色 100% 对齐（#D8FF63 / #141519），进页头不需要额外配色决策；单色场景可退化为 02。",
+      tags: ["two-tone", "on-brand", "header ready"],
+      body: `<rect x="6" y="6" width="88" height="88" rx="26" fill="#D8FF63"/><path d="M33 28H45A22 22 0 0 1 45 72H33" fill="none" stroke="#141519" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`
+    }
+  ];
+
+  const svg = (body, size) =>
+    `<svg viewBox="0 0 100 100" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">${body}</svg>`;
+
+  document.getElementById("grid").innerHTML = V.map(v => `
+    <article class="card">
+      <div class="card-head">
+        <h2>${v.name}</h2>
+        <span class="card-no">${v.no}</span>
+      </div>
+      <div class="stage">
+        <div class="canvas">${svg(v.body, 118)}</div>
+        <div class="swatches">
+          <div class="swatch swatch--dark">${svg(v.body, 26)}</div>
+          <div class="swatch swatch--lime">${svg(v.body, 26)}</div>
+          <div class="swatch swatch--blue">${svg(v.body, 26)}</div>
+        </div>
+      </div>
+      <p class="rationale"><strong>${v.concept}</strong>${v.note}</p>
+      <div class="tags">${v.tags.map(t => `<i>${t}</i>`).join("")}</div>
+    </article>
+  `).join("");
+
+  const sizes = [16, 24, 32, 44];
+  const rows = [
+    `<div class="scale-row scale-head"><span>方向</span>${sizes.map(s => `<span>${s}px</span>`).join("")}</div>`
+  ].concat(V.map(v => `
+    <div class="scale-row">
+      <span>${v.no} · ${v.name}</span>
+      ${sizes.map(s => `<span class="scale-cell">${svg(v.body, s)}</span>`).join("")}
+    </div>
+  `));
+  document.getElementById("scaleRows").innerHTML = rows.join("");
+</script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/data/personal";
+import { BrandMark } from "@/components/icons/BrandMark";
 
 const navigationItems = [
   { href: "#work", label: "精选作品", en: "WORK" },
@@ -46,7 +47,7 @@ export function SiteHeader() {
     <>
       <header className="site-header">
         <a href="#top" className="brand" onClick={closeMenu} aria-label="Dawson 首页">
-          <span className="brand-mark">D/</span>
+          <span className="brand-mark"><BrandMark /></span>
           <span className="brand-name">
             Dawson
             <small>AI Workflow Architect</small>
