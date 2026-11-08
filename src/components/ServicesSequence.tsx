@@ -8,11 +8,19 @@ export function ServicesSequence() {
 
   return (
     <section ref={sectionRef} id="services" className="services-section section-pad" aria-labelledby="services-title">
+      <div className="section-edge" data-edge="lime" aria-hidden="true" />
       <div className="page-shell">
         <div className="section-heading section-heading--dark" data-reveal>
           <div>
             <p className="section-label"><span>02</span> BUSINESS / C × B</p>
-            <h2 id="services-title">C 端当天能用，<br />B 端抗得住检验。</h2>
+            <h2 id="services-title">
+              <span className="mask-line">
+                <span className="mask-line-inner">C 端当天能用，</span>
+              </span>
+              <span className="mask-line">
+                <span className="mask-line-inner">B 端抗得住检验。</span>
+              </span>
+            </h2>
           </div>
           <p className="section-intro">不教虚头巴脑的理论：面向个人传授当天能用上的 AI 实操方法，面向企业交付能抗住业务检验的 AI 工作流与工程系统。</p>
         </div>

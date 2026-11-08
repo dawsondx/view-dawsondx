@@ -36,6 +36,8 @@
   --muted: #666663;
   --line: rgba(20, 21, 25, 0.18);
   --spring: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --page-pad: clamp(20px, 4vw, 64px);
   --mono: "Martian Mono", "SFMono-Regular", Consolas, monospace;
   color-scheme: light;
@@ -507,6 +509,7 @@ div[id] {
 
 .hero-grid {
   position: relative;
+  perspective: 1400px;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
   align-items: center;
@@ -516,7 +519,6 @@ div[id] {
 .hero-copy {
   position: relative;
   z-index: 2;
-  animation: rise-in 1s var(--spring) 0.1s both;
 }
 
 .hero-eyebrow {
@@ -543,7 +545,14 @@ div[id] {
   letter-spacing: -0.07em;
 }
 
-.hero-title > span {
+.hero-title > .hero-line {
+  display: block;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  overflow: hidden;
+}
+
+.hero-line-inner {
   display: block;
 }
 
@@ -572,6 +581,14 @@ div[id] {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
+}
+
+.hero-actions .button {
+  transition: box-shadow 0.3s, background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.hero-actions .button:hover {
+  transform: none;
 }
 
 .hero-proof {
@@ -609,6 +626,13 @@ div[id] {
   line-height: 1.5;
 }
 
+.hero-art-wrap {
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
 .hero-art {
   position: relative;
   z-index: 1;
@@ -618,7 +642,6 @@ div[id] {
   background: #20232d;
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
   transform: rotate(1.5deg);
-  animation: art-in 1.2s var(--spring) 0.25s both;
   transition: transform 0.7s var(--spring);
 }
 
@@ -691,7 +714,12 @@ div[id] {
   background: var(--paper);
 }
 
-.work-grid {
+.work-rail-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.work-rail {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 28px;
@@ -1093,7 +1121,7 @@ div[id] {
   letter-spacing: -0.05em;
 }
 
-.about-copy h2 span {
+.about-copy h2 .accent {
   color: var(--blue);
 }
 
@@ -1343,7 +1371,7 @@ div[id] {
   letter-spacing: -0.07em;
 }
 
-.contact-hero h2 span {
+.contact-hero h2 .accent {
   color: var(--blue);
 }
 
@@ -1513,8 +1541,8 @@ div[id] {
 /* Motion */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.85s var(--spring), transform 0.85s var(--spring);
+  transform: translateY(24px);
+  transition: opacity 0.62s var(--ease-out), transform 0.62s var(--ease-out);
 }
 
 [data-reveal].in {
@@ -1525,16 +1553,6 @@ div[id] {
 @keyframes header-in {
   from { opacity: 0; transform: translate(-50%, -18px); }
   to { opacity: 1; transform: translate(-50%, 0); }
-}
-
-@keyframes rise-in {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: none; }
-}
-
-@keyframes art-in {
-  from { opacity: 0; transform: translateY(36px) rotate(5deg); }
-  to { opacity: 1; transform: rotate(1.5deg); }
 }
 
 @keyframes bob {
@@ -1679,7 +1697,7 @@ div[id] {
   .section-heading { margin-bottom: 44px; }
   .section-intro { font-size: 14px; }
 
-  .work-grid { grid-template-columns: 1fr; gap: 24px; }
+  .work-rail { grid-template-columns: 1fr; gap: 24px; }
   .work-card { grid-column: auto; border-radius: 24px; box-shadow: 5px 5px 0 var(--ink); }
   .case-visual { height: 270px; margin: 9px; }
   .case-metric { left: 22px; font-size: 86px; }
@@ -2272,4 +2290,172 @@ html.has-cursor-fx :is(input, textarea, [contenteditable="true"]) {
 
 @media (pointer: coarse) {
   .cursor-fx { display: none; }
+}
+
+/* ------------------------------------------------------------------
+   Motion — 标题遮罩 / 区块色帘 / 横向作品轨道 / 跑马灯
+------------------------------------------------------------------ */
+
+.mask-line {
+  display: block;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+  overflow: hidden;
+}
+
+.mask-line-inner {
+  display: block;
+}
+
+[data-count] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* 区块交界色帘：上一区块的颜色被卷走 */
+.work-section,
+.services-section,
+.about-section,
+.resources-section,
+.contact-section {
+  position: relative;
+}
+
+.section-edge {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 0;
+  height: 180px;
+  pointer-events: none;
+  clip-path: polygon(0 0, 100% 0, 100% 62%, 0 100%);
+  transform-origin: top center;
+  will-change: transform;
+  background: linear-gradient(
+    to bottom,
+    var(--edge) 0%,
+    color-mix(in srgb, var(--edge) 72%, transparent) 55%,
+    transparent 100%
+  );
+}
+
+.section-edge[data-edge="ink"] { --edge: var(--ink); }
+.section-edge[data-edge="paper"] { --edge: var(--paper); }
+.section-edge[data-edge="blue"] { --edge: var(--blue); }
+.section-edge[data-edge="lime"] { --edge: var(--lime); }
+
+.section-edge + .page-shell {
+  position: relative;
+  z-index: 1;
+}
+
+/* 桌面横向作品轨道（由 JS 加 .is-rail 后才生效，无 JS 时仍是 2×2 网格） */
+.work-rail-progress,
+.work-rail-hint {
+  display: none;
+}
+
+.work-rail-wrap.is-rail {
+  display: flex;
+  min-height: calc(100svh - 104px);
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 28px;
+}
+
+.work-rail-wrap.is-rail .work-rail {
+  flex: none;
+  display: flex;
+  width: max-content;
+  gap: 28px;
+  will-change: transform;
+}
+
+.work-rail-wrap.is-rail .work-card {
+  width: clamp(380px, 34vw, 470px);
+  flex: none;
+}
+
+.work-rail-wrap.is-rail .work-card--camp,
+.work-rail-wrap.is-rail .work-card--book {
+  width: clamp(520px, 47vw, 660px);
+}
+
+.work-rail-wrap.is-rail .case-visual {
+  height: 360px;
+}
+
+.work-rail-wrap.is-rail .work-rail-progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 2px;
+  background: rgba(20, 21, 25, 0.16);
+}
+
+.work-rail-wrap.is-rail .work-rail-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.work-rail-wrap.is-rail .work-rail-hint {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+/* 跑马灯条带 */
+.marquee {
+  overflow: hidden;
+  border-block: 2px solid var(--ink);
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.marquee--ink {
+  background: var(--ink);
+  color: var(--lime);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.4vw, 36px);
+  padding: 20px clamp(10px, 1.2vw, 18px);
+}
+
+.marquee-group li {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.4vw, 36px);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+
+.marquee-star {
+  font-size: 14px;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
 }

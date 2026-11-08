@@ -11,6 +11,7 @@ export function AboutVision() {
   return (
     <div ref={rootRef}>
       <section id="about" className="about-section section-pad" aria-labelledby="about-heading">
+        <div className="section-edge" data-edge="ink" aria-hidden="true" />
         <div className="page-shell">
           <p className="section-label" data-reveal><span>03</span> ABOUT DAWSON</p>
           <div className="about-grid">
@@ -31,7 +32,11 @@ export function AboutVision() {
 
             <div className="about-copy" data-reveal>
               <h2 id="about-heading">
-                {titleParts[0]}<span>AI</span>{titleParts[1]}
+                <span className="mask-line">
+                  <span className="mask-line-inner">
+                    {titleParts[0]}<span className="accent">AI</span>{titleParts[1]}
+                  </span>
+                </span>
               </h2>
               <div className="about-story">
                 {about.story.map((paragraph) => (

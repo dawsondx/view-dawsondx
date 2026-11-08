@@ -39,10 +39,18 @@ export function SiteFooter() {
 
   return (
     <footer ref={footerRef} id="contact" className="contact-section section-pad">
+      <div className="section-edge" data-edge="ink" aria-hidden="true" />
       <div className="page-shell">
         <p className="section-label" data-reveal><span>05</span> START A CONVERSATION</p>
         <div className="contact-hero" data-reveal>
-          <h2>下一个复杂问题，<br />交给我试试<span>。</span></h2>
+          <h2>
+            <span className="mask-line">
+              <span className="mask-line-inner">下一个复杂问题，</span>
+            </span>
+            <span className="mask-line">
+              <span className="mask-line-inner">交给我试试<span className="accent">。</span></span>
+            </span>
+          </h2>
           <div className="contact-actions">
             <a href={`mailto:${siteConfig.email}`} className="button button--dark">
               发邮件给我 <span aria-hidden="true">↗</span>

@@ -9,11 +9,19 @@ export function SkillsSection() {
 
   return (
     <section ref={sectionRef} id="resources" className="resources-section section-pad" aria-labelledby="resources-title">
+      <div className="section-edge" data-edge="paper" aria-hidden="true" />
       <div className="page-shell">
         <div className="section-heading section-heading--blue" data-reveal>
           <div>
             <p className="section-label"><span>04</span> PRODUCTS & RESOURCES</p>
-            <h2 id="resources-title">把方法，做成<br />能跑的系统。</h2>
+            <h2 id="resources-title">
+              <span className="mask-line">
+                <span className="mask-line-inner">把方法，做成</span>
+              </span>
+              <span className="mask-line">
+                <span className="mask-line-inner">能跑的系统。</span>
+              </span>
+            </h2>
           </div>
           <p className="section-intro">6 个独立开发与开源产品、2 座持续更新的知识库。把工作流里的高频痛点，用确定性的工程逻辑封装成可复用工具。</p>
         </div>
