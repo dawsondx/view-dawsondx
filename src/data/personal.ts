@@ -81,6 +81,7 @@ export const portfolio = {
       metricValue: "5",
       metricSuffix: "项",
       metricLabel: "5 项",
+      href: "https://github.com/dawsondx",
     },
     {
       id: "knowledge-base",
@@ -92,6 +93,7 @@ export const portfolio = {
       metricValue: "1W",
       metricSuffix: "+",
       metricLabel: "1W+",
+      href: "https://ima.qq.com/wiki/?shareId=07061007500c6201187ddb696ec0b8417b2d3a74dc33a558bdf9f6d070410ef9",
       cover: {
         topLeft: "03 / 知识",
         topRight: "IMA / KNOWLEDGE BASE",

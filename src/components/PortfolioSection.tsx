@@ -130,27 +130,31 @@ export function PortfolioSection() {
       <div className="page-shell">
         <div className="work-rail-wrap">
           <div className="work-rail">
-            {portfolio.cases.map((item) => (
-              <article key={item.id} className={`work-card work-card--${item.variant}`} data-reveal>
-                <a
-                  href={portfolio.pdfHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="work-card-link"
-                  aria-label={`在完整作品集中查看${item.title}`}
-                >
-                  <CaseVisual item={item} />
-                  <div className="work-card-body">
-                    <div>
-                      <p>{item.category}</p>
-                      <h3>{item.title}</h3>
+            {portfolio.cases.map((item) => {
+              const hasOwnLink = "href" in item;
+
+              return (
+                <article key={item.id} className={`work-card work-card--${item.variant}`} data-reveal>
+                  <a
+                    href={hasOwnLink ? item.href : portfolio.pdfHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="work-card-link"
+                    aria-label={hasOwnLink ? `打开${item.title}` : `在完整作品集中查看${item.title}`}
+                  >
+                    <CaseVisual item={item} />
+                    <div className="work-card-body">
+                      <div>
+                        <p>{item.category}</p>
+                        <h3>{item.title}</h3>
+                      </div>
+                      <span className="round-arrow" aria-hidden="true">↗</span>
+                      <p className="work-description">{item.description}</p>
                     </div>
-                    <span className="round-arrow" aria-hidden="true">↗</span>
-                    <p className="work-description">{item.description}</p>
-                  </div>
-                </a>
-              </article>
-            ))}
+                  </a>
+                </article>
+              );
+            })}
           </div>
           <div className="work-rail-progress" aria-hidden="true">
             <span />
