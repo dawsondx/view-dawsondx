@@ -735,6 +735,7 @@ div[id] {
   transition: transform 0.4s var(--spring), box-shadow 0.4s var(--spring);
 }
 
+.work-card--oss,
 .work-card--camp,
 .work-card--book { grid-column: span 7; }
 .work-card--deck,
@@ -760,6 +761,7 @@ div[id] {
 }
 
 .case-visual--camp { background: var(--blue); color: #fff; }
+.case-visual--oss { background: var(--ink); color: #fff; }
 .case-visual--deck { background: var(--lime); color: var(--ink); }
 .case-visual--library { background: var(--coral); color: var(--ink); }
 .case-visual--book { background: var(--ink-soft); color: #fff; }
@@ -2375,6 +2377,7 @@ html.has-cursor-fx :is(input, textarea, [contenteditable="true"]) {
   flex: none;
 }
 
+.work-rail-wrap.is-rail .work-card--oss,
 .work-rail-wrap.is-rail .work-card--camp,
 .work-rail-wrap.is-rail .work-card--book {
   width: clamp(520px, 47vw, 660px);
