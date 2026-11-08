@@ -2312,7 +2312,7 @@ html.has-cursor-fx :is(input, textarea, [contenteditable="true"]) {
   font-feature-settings: "tnum" 1;
 }
 
-/* 区块交界色帘：上一区块的颜色被卷走 */
+/* 整屏底色推移：分界线随滚动扫过视口，上下两侧各自保持所属区块的颜色 */
 .work-section,
 .services-section,
 .about-section,
@@ -2321,31 +2321,31 @@ html.has-cursor-fx :is(input, textarea, [contenteditable="true"]) {
   position: relative;
 }
 
-.section-edge {
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 0;
-  height: 180px;
+.page-tint {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: none;
   pointer-events: none;
-  clip-path: polygon(0 0, 100% 0, 100% 62%, 0 100%);
-  transform-origin: top center;
-  will-change: transform;
-  background: linear-gradient(
-    to bottom,
-    var(--edge) 0%,
-    color-mix(in srgb, var(--edge) 72%, transparent) 55%,
-    transparent 100%
-  );
+  background-color: var(--paper);
 }
 
-.section-edge[data-edge="ink"] { --edge: var(--ink); }
-.section-edge[data-edge="paper"] { --edge: var(--paper); }
-.section-edge[data-edge="blue"] { --edge: var(--blue); }
-.section-edge[data-edge="lime"] { --edge: var(--lime); }
+.global-tint .page-tint {
+  display: block;
+}
 
-.section-edge + .page-shell {
-  position: relative;
-  z-index: 1;
+/* body 的背景会盖在 z-index:-1 的色带之上，接管后必须让位给色带 */
+.global-tint body {
+  background: transparent;
+}
+
+.global-tint .hero,
+.global-tint .work-section,
+.global-tint .services-section,
+.global-tint .about-section,
+.global-tint .resources-section,
+.global-tint .contact-section {
+  background: transparent;
 }
 
 /* 桌面横向作品轨道（由 JS 加 .is-rail 后才生效，无 JS 时仍是 2×2 网格） */

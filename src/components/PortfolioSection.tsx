@@ -105,7 +105,6 @@ export function PortfolioSection() {
 
   return (
     <section ref={sectionRef} id="work" className="work-section section-pad" aria-labelledby="work-title">
-      <div className="section-edge" data-edge="ink" aria-hidden="true" />
       <div className="page-shell">
         <div className="section-heading" data-reveal>
           <div>

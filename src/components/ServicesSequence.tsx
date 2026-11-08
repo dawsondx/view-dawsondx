@@ -8,7 +8,6 @@ export function ServicesSequence() {
 
   return (
     <section ref={sectionRef} id="services" className="services-section section-pad" aria-labelledby="services-title">
-      <div className="section-edge" data-edge="lime" aria-hidden="true" />
       <div className="page-shell">
         <div className="section-heading section-heading--dark" data-reveal>
           <div>

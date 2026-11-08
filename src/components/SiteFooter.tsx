@@ -39,7 +39,6 @@ export function SiteFooter() {
 
   return (
     <footer ref={footerRef} id="contact" className="contact-section section-pad">
-      <div className="section-edge" data-edge="ink" aria-hidden="true" />
       <div className="page-shell">
         <p className="section-label" data-reveal><span>05</span> START A CONVERSATION</p>
         <div className="contact-hero" data-reveal>

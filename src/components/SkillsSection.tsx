@@ -9,7 +9,6 @@ export function SkillsSection() {
 
   return (
     <section ref={sectionRef} id="resources" className="resources-section section-pad" aria-labelledby="resources-title">
-      <div className="section-edge" data-edge="paper" aria-hidden="true" />
       <div className="page-shell">
         <div className="section-heading section-heading--blue" data-reveal>
           <div>

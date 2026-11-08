@@ -11,7 +11,6 @@ export function AboutVision() {
   return (
     <div ref={rootRef}>
       <section id="about" className="about-section section-pad" aria-labelledby="about-heading">
-        <div className="section-edge" data-edge="ink" aria-hidden="true" />
         <div className="page-shell">
           <p className="section-label" data-reveal><span>03</span> ABOUT DAWSON</p>
           <div className="about-grid">
