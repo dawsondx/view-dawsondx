@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CloudflareBeacon } from "@/components/common/CloudflareBeacon";
 import { CustomCursor } from "@/components/common/CustomCursor";
 import { SiteMotion } from "@/components/common/SiteMotion";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
         {children}
         <SiteMotion />
         <CustomCursor />
+        <CloudflareBeacon />
       </body>
     </html>
   );

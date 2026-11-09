@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Visit analytics: Cloudflare Web Analytics beacon plus a Worker + D1 counter rendered in the site footer; both stay inert until configured in `src/data/analytics.ts`
+
 ### Changed
 - Raised the project Node.js baseline to 24 across local development, CI, Docker, and contributor-facing documentation
 

@@ -1,0 +1,9 @@
+name = "view-visits"
+main = "visits-worker.js"
+compatibility_date = "2025-09-01"
+
+# 运行 `npx wrangler d1 create view-visits` 后，把返回的 database_id 填到下面
+[[d1_databases]]
+binding = "DB"
+database_name = "view-visits"
+database_id = ""

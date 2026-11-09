@@ -1518,6 +1518,24 @@ div[id] {
   font-weight: 700;
 }
 
+.visit-counter {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: rgba(20, 21, 25, 0.6);
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.visit-counter strong {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .legal {
   display: flex;
   align-items: center;
@@ -1760,7 +1778,7 @@ div[id] {
   .channel-card { grid-template-columns: 1fr; padding: 14px; }
   .channel-card img { grid-row: auto; width: 64px; height: 64px; margin-bottom: 8px; }
 
-  .footer-meta { margin-top: 72px; }
+  .footer-meta { margin-top: 72px; flex-direction: column; align-items: flex-start; gap: 14px; }
   .footer-meta .brand-mark { display: none; }
   .legal { flex-direction: column; gap: 6px; margin-top: 36px; }
 }
