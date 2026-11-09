@@ -7,9 +7,9 @@
 | 后台看板（来源/国家/设备/热门页面） | Cloudflare Web Analytics | 官方脚本片段，已原样写入 `src/app/layout.tsx` |
 | 页面显示「累计访问 xxxx 次」 | Cloudflare Worker + D1 | 部署 1 个 Worker，拿 1 个 URL 填进代码 |
 
-配置都集中在 `src/data/analytics.ts`。两个值都留空时，站点不加载任何统计脚本，行为与之前一致。
+Web Analytics 的官方脚本片段已内置在 `src/app/layout.tsx`（token 硬编码在片段里，无需配置，始终生效）；`src/data/analytics.ts` 里只剩 Worker 计数接口地址 `visitsApi`，留空时页面不显示计数，站点行为与之前一致。
 
-这两个值都会出现在前端产物里，属公开信息，不是密钥。
+`visitsApi` 会出现在前端产物里，属公开信息，不是密钥。
 
 ---
 
