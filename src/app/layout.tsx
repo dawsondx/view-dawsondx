@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CloudflareBeacon } from "@/components/common/CloudflareBeacon";
 import { CustomCursor } from "@/components/common/CustomCursor";
 import { SiteMotion } from "@/components/common/SiteMotion";
 
@@ -63,7 +62,17 @@ export default function RootLayout({
         {children}
         <SiteMotion />
         <CustomCursor />
-        <CloudflareBeacon />
+        {/*
+          Cloudflare Web Analytics。以下为 Cloudflare 控制台「Manually add a site」
+          给出的原始片段，逐字保留：type="module" 在 HTML 解析阶段加载，不依赖 hydration。
+          静态导出会把它原样写进 out/index.html 的 body 末尾。
+        */}
+        <div
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f6194082d20c498298da7b02b9dfff64"}'></script><!-- End Cloudflare Web Analytics -->`,
+          }}
+        />
       </body>
     </html>
   );

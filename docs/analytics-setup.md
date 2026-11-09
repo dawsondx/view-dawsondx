@@ -4,7 +4,7 @@
 
 | 能力 | 实现 | 你要做的 |
 | --- | --- | --- |
-| 后台看板（来源/国家/设备/热门页面） | Cloudflare Web Analytics | 拿 1 个 token 填进代码 |
+| 后台看板（来源/国家/设备/热门页面） | Cloudflare Web Analytics | 官方脚本片段，已原样写入 `src/app/layout.tsx` |
 | 页面显示「累计访问 xxxx 次」 | Cloudflare Worker + D1 | 部署 1 个 Worker，拿 1 个 URL 填进代码 |
 
 配置都集中在 `src/data/analytics.ts`。两个值都留空时，站点不加载任何统计脚本，行为与之前一致。
@@ -21,33 +21,16 @@
 4. 输入 `view.dawsondx.top`，继续。
 5. 关键一步：选择 **Manually add a site**（不要选自动安装）。
    - 本站托管在 GitHub Pages，流量不经过 Cloudflare 代理，所以只能手动装脚本。
-6. 复制给出的 JS 片段，里面形如：
+6. 复制给出的整段 JS 片段（含首尾两行注释），形如：
 
-   `{"token":"a1b2c3d4e5f6..."}`
-
-   只取 `token` 后面的那串字符。
-7. 填到 `src/data/analytics.ts`：
-
-   ```ts
-   cfBeaconToken: "a1b2c3d4e5f6...",
+   ```html
+   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "xxxx"}'></script><!-- End Cloudflare Web Analytics -->
    ```
 
+7. 整段原样粘到 `src/app/layout.tsx` 的 `</body>` 之前，不要改写、不要换成 `next/script` 或加 `defer`/`async`。
+   当前 token 为 `f6194082d20c498298da7b02b9dfff64`。
+
 数据延迟约 5–10 分钟出现在看板。首次部署后如果显示「No data」，先等半小时再刷新。
-
-### 为什么脚本是自托管的
-
-官方片段引用 `static.cloudflareinsights.com`。该域名在中国大陆网络下连接会被重置（浏览器报 `ERR_CONNECTION_CLOSED`，实测直连超时），国内访客根本加载不到脚本，统计会完全是空的。
-
-所以 `public/beacon.min.js` 存了一份副本，页面通过 `src="/beacon.min.js"` 从本站同域加载。脚本内部的上报端点是 `cloudflareinsights.com/cdn-cgi/rum`，与 CDN 域名无关，不受影响。
-
-代价是 Cloudflare 升级 beacon 时不会自动跟进。需要更新时：
-
-```bash
-curl -o public/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js
-```
-
-这一步需要一个能访问 Cloudflare CDN 的网络环境（公司网络或代理）。
-
 
 ---
 
