@@ -34,6 +34,21 @@
 
 数据延迟约 5–10 分钟出现在看板。首次部署后如果显示「No data」，先等半小时再刷新。
 
+### 为什么脚本是自托管的
+
+官方片段引用 `static.cloudflareinsights.com`。该域名在中国大陆网络下连接会被重置（浏览器报 `ERR_CONNECTION_CLOSED`，实测直连超时），国内访客根本加载不到脚本，统计会完全是空的。
+
+所以 `public/beacon.min.js` 存了一份副本，页面通过 `src="/beacon.min.js"` 从本站同域加载。脚本内部的上报端点是 `cloudflareinsights.com/cdn-cgi/rum`，与 CDN 域名无关，不受影响。
+
+代价是 Cloudflare 升级 beacon 时不会自动跟进。需要更新时：
+
+```bash
+curl -o public/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js
+```
+
+这一步需要一个能访问 Cloudflare CDN 的网络环境（公司网络或代理）。
+
+
 ---
 
 ## 二、Worker 计数器（页面显示访问量）
