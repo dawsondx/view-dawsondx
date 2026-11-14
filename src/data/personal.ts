@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Dawson",
-  title: "AI 工作流架构师 ｜ 全栈独立开发者",
+  title: "「Dawson聊AI提效」主理人 ｜ AI FDE",
   location: "深圳",
   email: "dawsondx@foxmail.com",
   wechat: "dawsondx00",
@@ -10,10 +10,8 @@ export const siteConfig = {
 
 export const hero = {
   identities: [
-    "PMP 运维项目经理",
-    "AI 产品与工作流架构师",
-    "全栈独立开发者",
     "「Dawson聊AI提效」主理人",
+    "AI FDE",
   ],
   declaration:
     "PMP 认证的一线实体运维项目经理，也是深耕 AI 商业化落地的全栈独立开发者。用确定性的工程与自动化工具，帮传统行业职场人干掉低效重复工作。",
