@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Dawson",
-  title: "PMP 运维项目经理 ｜ AI 工作流架构师 ｜ 全栈独立开发者",
+  title: "AI 工作流架构师 ｜ 全栈独立开发者",
   location: "深圳",
   email: "dawsondx@foxmail.com",
   wechat: "dawsondx00",
